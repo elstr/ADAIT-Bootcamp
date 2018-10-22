@@ -90,26 +90,26 @@ En cada oportunidad fallida dira si el numero es mayor o menor a modo de ayuda. 
 Construir un algoritmo que pida una palabra al usuario y le diga cuantas vocales tiene. (ayuda usar funciones longitud y subcadena)
 
 * Ejercicio 22 <br/>
-Escribir en un arreglo de 10 posiciones los numeros del 1 al 10
+Escribir en un array de 10 posiciones los numeros del 1 al 10
 
 * Ejercicio 23 <br/>
-escribir en un arreglo de 8 posiciones las notas de un alumno y luego mostrar su promedio
+Escribir en un array de 8 posiciones las notas de un alumno y luego mostrar su promedio
 
 * Ejercicio 24 <br/> 
-Escribir en un arreglo de 10 posiciones nombres y luego pedirle al usuario una posicion y mostrar por pantalla el nombre correspondiente a esa posicion
+Escribir en un array de 10 posiciones nombres y luego pedirle al usuario una posicion y mostrar por pantalla el nombre correspondiente a esa posicion
 
 * Ejercicio 25 <br/>
-esrcibir un algoritmo que se le pida al usuario ingresar valores para 2 arreglos de 5 posiciones llamados A1 y A2. luego compararlos posicion por posicion y decir quien "gano" y por cuanto, ejemplo
+esrcibir un algoritmo que se le pida al usuario ingresar valores para 2 arrays de 5 posiciones llamados A1 y A2. luego compararlos posicion por posicion y decir quien "gano" y por cuanto, ejemplo
 A1=[3,5,6,4,8]  A2=[1,6,4,8,9]   3>1,5<6, 6>4, 4<8, 8<9  gano A2 por 3 a 2
 
 * Ejercicio 26 <br/> 
-En un arreglo de 10 posiciones cargar numeros al azar de 0 al 50 y luego ordenar el arreglo
+En un array de 10 posiciones cargar numeros al azar de 0 al 50 y luego ordenar el array
 
 * Ejercicio 27 <br/>
-En un arreglo de 10 posiciones cargar el nombre de destinos de vuelos, luego pedirle al usuario que ingrese un destino y responder si ese destino esta o no en la lista
+En un array de 10 posiciones cargar el nombre de destinos de vuelos, luego pedirle al usuario que ingrese un destino y responder si ese destino esta o no en la lista
 
 * Ejercicio 28 <br/>
-En 1 arreglo de 8 posiciones llamado "partidos" ingresar los nombres de los distintos partidos que estuvieron en la eleccion, luego en otro arreglo de 8 posiciones ingresar la cantidad de votos de cada partido haciendo corresponder la cantidad de votos con el partido, luego indicar que partido fue el mas votado y con cuantos votos.
+En 1 array de 8 posiciones llamado "partidos" ingresar los nombres de los distintos partidos que estuvieron en la eleccion, luego en otro array de 8 posiciones ingresar la cantidad de votos de cada partido haciendo corresponder la cantidad de votos con el partido, luego indicar que partido fue el mas votado y con cuantos votos.
 
 * Ejercicio 29 <br/>
 Realizar un algoritmo con una función que reciba 2 numeros y te devuelva la suma de los numeros intermedios. 
