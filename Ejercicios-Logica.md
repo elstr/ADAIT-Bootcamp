@@ -16,13 +16,13 @@ Realice el calculo del sueldo de un empleado ingresando el sueldo neto y sabiend
     <br/>	Opcion 3. solicitar ayuda ->	Respuesta "todos los operadores se encuentran ocupados"
     <br/>	Opcion 4. dar la baja ->	Respuesta "opcion invalida"
     <br/>	Opcion 5. salir ->	Respuesta "gracias por usar nuestro servicio"
-    <br/>
+    
     * c) Se pide que la persona ingrese el monto a financiar y la cantidad de cuotas segun nuestra tabla <br/>
     1 cuota 	0% <br/>
     12 cuotas	20% <br/>
     24 cuotas	45% <br/>
     36 cuotas	70% <br/>
-    <br/>
+    
     * Como ejemplo si alguien ingresa como monto 1000 le queda a abonar en <br/>
     1 cuota		1000 <br/>
     12 cuotas	100 <br/>
