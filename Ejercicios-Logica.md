@@ -8,27 +8,26 @@ Realizar un algoritmo para la conversión de dólares a pesos, ingresando el mon
 Realice el calculo del sueldo de un empleado ingresando el sueldo neto y sabiendo que se le descuenta un 15 % por cargas sociales y se le suma un 10% si tuvo asistencia perfecta (preguntar si  tuvo ausencias)
 
 * Ejercicio 4 <br/>
+    * a) En una tienda de ropa se cobra con varios medios de pago pero tienen diferencia de recargos, en efectivo se cobra el precio normal, con debito un 5%, con credito un 10% y cheque un 20%
 
-a) En una tienda de ropa se cobra con varios medios de pago pero tienen diferencia de recargos, en efectivo se cobra el precio normal, con debito un 5%, con credito un 10% y cheque un 20%
-
-b) Para una contestadora telefonica programar las siguientes opciones: 
-**	Opcion 1. conocer su deudad ->	Respuesta "su deuda es " ...
-**	Opcion 2. comprar nuevos productos ->	Respuesta "sera atendido en instantes"
-**	Opcion 3. solicitar ayuda ->	Respuesta "todos los operadores se encuentran ocupados"
-**	Opcion 4. dar la baja ->	Respuesta "opcion invalida"
-**	Opcion 5. salir ->	Respuesta "gracias por usar nuestro servicio"
-<br/>
-c) Se pide que la persona ingrese el monto a financiar y la cantidad de cuotas segun nuestra tabla <br/>
-1 cuota 	0% <br/>
-12 cuotas	20% <br/>
-24 cuotas	45% <br/>
-36 cuotas	70% <br/>
-<br/>
-Como ejemplo si alguien ingresa como monto 1000 le queda a abonar en <br/>
-1 cuota		1000 <br/>
-12 cuotas	100 <br/>
-24 cuotas	60,41 <br/>
-36 cuotas	47,22 <br/>
+    * b) Para una contestadora telefonica programar las siguientes opciones: 
+    <br/>	Opcion 1. conocer su deudad ->	Respuesta "su deuda es x "
+    <br/>	Opcion 2. comprar nuevos productos ->	Respuesta "sera atendido en instantes"
+    <br/>	Opcion 3. solicitar ayuda ->	Respuesta "todos los operadores se encuentran ocupados"
+    <br/>	Opcion 4. dar la baja ->	Respuesta "opcion invalida"
+    <br/>	Opcion 5. salir ->	Respuesta "gracias por usar nuestro servicio"
+    <br/>
+    * c) Se pide que la persona ingrese el monto a financiar y la cantidad de cuotas segun nuestra tabla <br/>
+    1 cuota 	0% <br/>
+    12 cuotas	20% <br/>
+    24 cuotas	45% <br/>
+    36 cuotas	70% <br/>
+    <br/>
+    * Como ejemplo si alguien ingresa como monto 1000 le queda a abonar en <br/>
+    1 cuota		1000 <br/>
+    12 cuotas	100 <br/>
+    24 cuotas	60,41 <br/>
+    36 cuotas	47,22 <br/>
 
 * Ejercicio 5 <br/>
 El usuario ingresa un numero de 1 al 10. <br/>
@@ -39,12 +38,15 @@ Mostrar por pantalla los numeros siguientes hasta llegar a 10. Ejemplo: si escri
 
 * Ejercicio 7 <br/>
 Realizar un algoritmo que muestre la tabla de multiplicar del 1 al 10, de un numero ingresado por el usuario
-ejemplo si ingreso 2 que muestre
+<br />
+Ejemplo si ingreso 2 que muestre
+<br />
+```
 2 x 1 = 2
 2 x 2 = 4
 ....
 2 x 10 = 20
-
+```
 * Ejercicio 8 <br/>
 Se escriben el promedio y el nombre de 10 alumnos, al finalizar muestre el nombre y promedio del mejor.
 
