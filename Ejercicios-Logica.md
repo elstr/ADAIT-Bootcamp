@@ -38,15 +38,11 @@ Mostrar por pantalla los numeros siguientes hasta llegar a 10. Ejemplo: si escri
 
 * Ejercicio 7 <br/>
 Realizar un algoritmo que muestre la tabla de multiplicar del 1 al 10, de un numero ingresado por el usuario
-<br />
-Ejemplo si ingreso 2 que muestre
-<br />
-```
-2 x 1 = 2
-2 x 2 = 4
-....
-2 x 10 = 20
-```
+    * Ejemplo si ingreso 2 que muestre
+        2 x 1 = 2<br />
+        2 x 2 = 4<br />
+        .... <br />
+        2 x 10 = 20 <br /> 
 * Ejercicio 8 <br/>
 Se escriben el promedio y el nombre de 10 alumnos, al finalizar muestre el nombre y promedio del mejor.
 
@@ -120,8 +116,8 @@ Realizar un algoritmo con una función que reciba 2 numeros y te devuelva la sum
 por ejemplo SumaIntermedios(3,9)=4+5+6+7+8=30
 
 * Ejercicio 30 <br/>
-Programar una funcion SacarRepetidos que realice lo siguiente: <br/>  
-Si hay algun numero repetido deja el primero que encuentre y a las copias les pone un 0.
+Programar una funcion SacarRepetidos que realice lo siguiente:  
+    Si hay algun numero repetido deja el primero que encuentre y a las copias les pone un 0.
 
 
 * Ejercicio 31 <br/>
