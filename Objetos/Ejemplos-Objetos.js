@@ -73,3 +73,29 @@ myObj.key = value;
 // // Qué diferencia hay ?
 // // Que en el literal podemos volcar todas las props y metodos de una
 // // En constructed tenes que ir agregando uno por uno
+
+// // Cómo recuperar los valores de un objeto?
+console.log(dino1.tipo);
+console.log(dino1["tipo"]);
+
+// // Qué pasa si no sé cómo se llaman las propiedades?
+// // ES6 Al rescate -> Object.keys y Object.values
+// // Dinámicamente recuperar valores de un objeto
+const mesa = {
+  cantidadPatas: 4,
+  tipo: "rectangular",
+  largo: 1.2,
+  ancho: 0.6
+};
+
+// // Object.keys retorna un array con los nombres de las propiedades de un objeto
+console.log(Object.keys(mesa));
+// // Object.values retorna un array con los valores asignados a esas propiedades
+console.log(Object.values(mesa));
+
+// // Desafío:
+// // Con object keys y object values recuperar los valores de las propiedades dinámicamente
+const props2 = Object.keys(mesa);
+for (var i = 0; i < props2.length - 1; i++) {
+  console.log(mesa[props2[i]]);
+}
