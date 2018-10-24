@@ -98,7 +98,7 @@ var auto = {
 };
 
 // //    Crear una función para cargar un auto a un camion
-// // 	•	El camnion tiene un peso maximo de carga
+// // 	•	El camion tiene un peso maximo de carga
 // // 	•	El objeto camion Debera validar con cada auto
 // //       ingresado si esta por debajo del peso
 // //       o si ya no lo puede agregar
@@ -146,12 +146,8 @@ var auto3 = {
   peso: 300
 };
 camionConBug.cargarAuto(auto1);
-// 1) auto = peso maximo
-
-camionConBug.cargarAuto();
 
 // Todas las resoluciones tiene un BUG chiquito que quiero que encuentren y resuelvan
-``;
 // 1) Búsqueda lineal
 var camion3 = {
   pesoMaximo: 200,
