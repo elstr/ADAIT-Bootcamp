@@ -153,7 +153,7 @@ function ordenarPorTitulo(peli1, peli2) {
 
 // 2) Llamar a SORT sobre el array que queremos ordenar
 // El método sort RECIBE el criterio de ordenamiento => el criterio es una FUNCION
-peliculas.sort(ordenarPorTitulo); // El array de películas lo tenemos definido más arriba (línea 127)
+peliculas.sort(ordenarPorTitulo); // El array de películas lo tenemos definido más arriba (línea 91)
 console.log(peliculas);
 // -----------------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------------
