@@ -1,0 +1,45 @@
+// // Ejercicios:
+
+// // 1) Equinos
+// // Definir una clase Equino junto con las características comúnes de los equinos
+// // Agregarle un método galopar que retorne "Soy un " + tipo de equino + " y estoy galopando libre por la pradera"
+// // Crear a partir de ella objetos Unicornios / Caballos / Ponys
+
+class Equino {
+  constructor(patas, pelo, tipo) {
+    this.patas = patas;
+    this.pelo = pelo;
+    this.tipo = tipo;
+  }
+  galopar() {
+    return "Soy un " + this.tipo + " y estoy galopando libre por la pradera";
+  }
+}
+
+const miPony = new Equino(4, "corto", "Pony");
+console.log(miPony.galopar());
+
+// // 2) Animales
+// // Definir una clase Animal
+// // Asignarle tipo, sonidoCaracteristico y un método hacerSonido
+// // Instanciar una vaca (muuuu), un perro (wuf) y un gato (meow)
+// // Llamar al sonido caracteristico de cada Animal
+
+class Animal {
+  // Esto es lo primero que se ejecuta cuando instancio un obj
+  constructor(tipo, sonidoCaracteristico) {
+    this.tipo = tipo;
+    this.sonidoCaracteristico = sonidoCaracteristico;
+  }
+
+  hacerSonido() {
+    console.log(this.sonidoCaracteristico);
+  }
+}
+
+// 7) Como instancio un objeto
+var perro = new Animal("perro", "wuf");
+perro.hacerSonido();
+
+var pony = new Animal("equino", "relinche");
+pony.hacerSonido();
