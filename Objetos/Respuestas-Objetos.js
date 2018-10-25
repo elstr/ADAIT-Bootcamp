@@ -137,13 +137,16 @@ var camionConBug = {
 };
 
 var auto1 = {
-  peso: 20
+  peso: 20,
+  patente: "ABC111"
 };
 var auto2 = {
-  peso: 30
+  peso: 30,
+  patente: "ABC111"
 };
 var auto3 = {
-  peso: 300
+  peso: 300,
+  patente: "ZZZ111"
 };
 camionConBug.cargarAuto(auto1);
 
@@ -191,8 +194,8 @@ var camionIndexOf = {
       // Guardo mi primer patente
       this.patentesGuardadas.push(autoQueRecibo.patente);
     } else {
-      // Si indexOf devuelve -1 no pushea la patente al array
-      this.puedoAgregarPatente(autoQueRecibo.patente) &&
+      // Si indexOf devuelve -1 pushea la patente al array
+      this.puedoAgregarPatente(autoQueRecibo.patente) === -1 &&
         this.patentesGuardadas.push(autoQueRecibo.patente);
     }
     console.log("Peso acumulado", this.pesoAcumulado);
@@ -231,10 +234,67 @@ var camionConFind = {
     // find se para en cada uno de los elementos del array
     // ["AA", "BB"] => la primera vez p es igual a "AA", la segunda p es igual a "BB" y asi...
     // recorre todos los elementos de mi array hasta encontrar alguno que sea ""=== patente"
-    const resultadoBusqueda = this.patentesGuardadas.find(p => p === patente);
+    const resultadoBusqueda = this.patentesGuardadas.find(
+      elementoDelArray => elementoDelArray === patente
+    );
     // si resultado es IGUAL a undefined quiere decir que la patente no existe
     // si resultado es IGUAL a undefined retorna TRUE
     // caso contrario retorna FALSE
     return resultadoBusqueda === undefined; // hermoso <3
+  }
+};
+
+// Modifiquemos el orden. Primero vamos a ver si existe la patente
+
+var camionConFind = {
+  pesoMaximo: 200,
+  pesoAcumulado: 0,
+  patentesGuardadas: [],
+  cargarAuto: function(autoQueRecibo) {
+    if (this.puedoAgregarPatente(auto.patente)) {
+      var pesoDisponible = this.pesoMaximo - this.pesoAcumulado;
+      if (autoQueRecibo.peso <= pesoDisponible) {
+        this.pesoAcumulado = this.pesoAcumulado + autoQueRecibo.peso;
+        this.patentesGuardadas.push(autoQueRecibo.patente);
+      }
+      console.log("Peso acumulado", this.pesoAcumulado);
+      console.log("Patentes guardadas", this.patentesGuardadas);
+    }
+  },
+  puedoAgregarPatente: function(patente) {
+    const resultadoBusqueda = this.patentesGuardadas.find(
+      elementoDelArray => elementoDelArray === patente
+    );
+    return resultadoBusqueda === undefined; // hermoso <3
+  }
+};
+
+// Y si lo descomponemos en funciones más pequeñas ?
+var camionConFind = {
+  pesoMaximo: 200,
+  pesoAcumulado: 0,
+  patentesGuardadas: [],
+  validarCarga: function(autoQueRecibo) {
+    if (this.puedoAgregarPatente(auto.patente)) {
+      this.puedoCargarAuto(autoQueRecibo) && this.cargarAuto(autoQueRecibo);
+      console.log("Peso acumulado", this.pesoAcumulado);
+      console.log("Patentes guardadas", this.patentesGuardadas);
+    }
+  },
+  puedoAgregarPatente: function(patente) {
+    const resultadoBusqueda = this.patentesGuardadas.find(
+      elementoDelArray => elementoDelArray === patente
+    );
+    return resultadoBusqueda === undefined;
+  },
+  puedoCargarAuto: function(autoQueRecibo) {
+    var pesoDisponible = this.pesoMaximo - this.pesoAcumulado;
+    return autoQueRecibo.peso <= pesoDisponible;
+  },
+  cargarAuto(autoQueRecibo) {
+    // 1) actualizar el peso acumulado
+    this.pesoAcumulado = this.pesoAcumulado + autoQueRecibo.peso;
+    // 2) guardar la patente
+    this.patentesGuardadas.push(autoQueRecibo.patente);
   }
 };
