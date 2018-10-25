@@ -179,6 +179,11 @@ function borrarPelicula(pelicula) {
   console.log("Indice a borrar:", indice);
   // 1) Borro esa posicion del array
   peliculas.splice(indice, 1);
+  
+  // Atajando bugs: Qué pasa si la película no existe? Probá ese caso y fijate qué pasa.
+  // Agregá validar que la película exista en el array para borrarla.
+  // Y si lo haces en una función? y cada vez que tengas que validar si la película 
+  // ya existe, llamás a esa función? YASSSS GRRRLLL!!!
 }
 borrarPelicula(peli1);
 console.log(peliculas);
