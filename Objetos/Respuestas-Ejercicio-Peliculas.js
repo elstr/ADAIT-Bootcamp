@@ -142,7 +142,7 @@ agregarPelicula(peli7);
 // ------------- Cómo ordenar un array? SORT ------------------------------------------------
 // ------------------------------------------------------------------------------------------
 // 1) Definir un criterio de ordenamiento => Una función
-// Por definición ésta función va a recibir dos parametros (SORT se encargará de pasárselos)
+// Esta función va a recibir dos parametros (SORT se encargará de pasárselos) que va a ir comparando
 function ordenarPorTitulo(peli1, peli2) {
   // Defino el criterio de orden
   if (peli1.titulo < peli2.titulo) return -1;
