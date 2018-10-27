@@ -1,6 +1,5 @@
 # jQuery  
-En esta clase aprenderemos qué es jQuery, selectores y empezaremos a manipular el dom 🎉 
----
+🎉 Selectores, efectos y eventos 🎉
 
 ## Qué es jQuery? 🤔
 
@@ -11,9 +10,9 @@ El objetivo de jQuery es brindarnos un paquete de herramientas simples y fácile
 Todo el poder de jQuery se lo da JS. Si entendiste bien cómo manipular el DOM con vanilla JS vas a entender cómo trabaja jQuery detrás de escena. 
 
 ## Cómo agrego jQuery a mi proyecto?
-* Mediante una etiqueta script en nuestro HTML haciendo referencia a un link CDN(*).
+* Mediante una etiqueta script en nuestro HTML haciendo referencia a un link CDN(*).  <br/>
     `<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>`
-* Utilizando una versión local. Es decir, debemos descargarla localmente y servirla.
+* Utilizando una versión local. Es decir, debemos descargarla localmente y servirla. <br/>
     `<script src="js/jquery-1.11.0.min.js"></script>`
 <br/>
 > (*) CDN: Content delivery network o content distribution network.<br/>
@@ -29,39 +28,39 @@ Es decir, jQuery utiliza el poder de los selectores para acceder de una manera r
 
 ### Qué tipos de selectores hay? 🤔
 
-* Selector de etiquetas:
+* Selector de **etiquetas**:
     Simplemente indicamos la etiqueta a la que deseamos referirnos, es decir, la etiqueta que queremos seleccionar. Obtendremos con él todas las etiquetas de la página indicada en el selector. <br/>
     Ejemplo: <br/>
     ```js
         $("h1") // Selecciona todos los encabezados de nivel 1
     ```
-* Selector por identificador:
+* Selector por **identificador**:
     Sirven para seleccionar elementos que tengan un ID definido.
     Para utilizar este selector se indica primero el carácter **"#"** y el nombre del ID.
     Ejemplo: <br/>
     ```js 
         $("#idDelElemento") // Selecciona un elemento que tiene el atributo id="idDelElemento"    
     ```    
-* Selector por clase (clase CSS):
+* Selector por **clase** (clase CSS):
     Podemos indicar el nombre de una clase y seleccionar todos los elementos a los que se ha aplicado esta clase. Para ello, como en CSS, comenzamos colocando el carácter "." y luego el nombre de la clase que deseamos seleccionar.
      Ejemplo: <br/>
     ```js 
         $(".miClase") //selecciona todos los elementos que tienen el atributo class="miClase"
     ```
-* Selector por varias clases:
+* Selector por **varias clases**:
     Si lo deseamos, podemos indicar varias clases CSS, para obtener todos los elementos que tienen esas clases aplicadas: todas al mismo tiempo. Esto se consigue comenzando por un ".", igual que los selectores de clases, y luego otro "." para separar las distintas clases que queremos utilizar en el selector.
     Ejemplo: <br/>
     ```js 
         $(".clase1.clase2") //selecciona los elementos que tienen class="clase1 clase2"
     ```
-* Selector asterisco "*":
+* Selector asterisco **"*"**:
     Nos sirve para seleccionar **todos** los elementos de la página.
     Ejemplo: <br/>
     ```js 
         $("*") //selecciona todos los elementos que tiene la página
     ```        
 * Concatenar varios selectores distintos:
-    Por último, podemos utilizar varios selectores, para obtener todas las etiquetas que cumplen uno de ellos. No hace falta que cumplan todos los selectores a la vez, sino con que uno de ellos concuerde es suficiente. Para ello colocamos todos los selectores que deseamos, separados por una coma **","**.
+    Utilizar varios selectores para obtener todas las etiquetas que cumplen uno de ellos. No hace falta que cumplan todos los selectores a la vez, con uno alcanza. Para ello colocamos todos los selectores que deseamos, separados por una coma **","**.
      Ejemplo: <br/>
     ```js 
         $("div,p") //selecciona todos los elementos división y párrafo 
@@ -245,14 +244,14 @@ $("#p1")
   .slideDown(2000);
 ```
 
-### Animate
+## Animate
 Sintáxis: `$(selector).animate({params},speed,callback);`
 
 ⚠️ Importante: Por default todos los elementos HTML están en posición `static`. ⚠️  <br/>
 Para poder animarlos necesito cambiar su propiedad CSS `position` posición CSS a `relative`, `fixed`, o `absolute` 
 <br/>
 
-#### Ejemplos:  
+### Ejemplos:  
 
 ```js
 <div style="position:absolute;" />
@@ -276,7 +275,7 @@ $("button").click(function(){
 }); 
 ```  
 
-#### Valores relativos?
+### Valores relativos?
 Valores relativos al valor actual del elemento. 
 Utilizo `+=`
 
@@ -291,7 +290,7 @@ $("button").click(function(){
 }); 
 ```
 
-#### Combinar toggle, hide o show
+### Combinar toggle, hide o show
 ```js
 <div style="position:absolute;" />
 $("button").click(function(){
@@ -301,7 +300,7 @@ $("button").click(function(){
 }); 
 ```
 
-#### Cómo cortar una animación? STOP 🛑
+### Cómo cortar una animación? STOP 🛑
 
 ```js
 $("#stop").click(function(){
