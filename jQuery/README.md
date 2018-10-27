@@ -243,8 +243,8 @@ $("#p1")
   .slideUp(2000)
   .slideDown(2000);
 ```
-
-## Animate
+<br/>
+## Animate 😍
 Sintáxis: `$(selector).animate({params},speed,callback);`
 
 ⚠️ Importante: Por default todos los elementos HTML están en posición `static`. ⚠️  <br/>
