@@ -1,4 +1,4 @@
-#jQuery
+#jQuery  
 En esta clase aprenderemos qué es jQuery, selectores y empezaremos a manipular el dom 🎉 
 ---
 
@@ -35,7 +35,6 @@ Es decir, jQuery utiliza el poder de los selectores para acceder de una manera r
     ```js
         $("h1") // Selecciona todos los encabezados de nivel 1
     ```
-<br/>    
 * Selector por identificador:
     Sirven para seleccionar elementos que tengan un ID definido.
     Para utilizar este selector se indica primero el carácter **"#"** y el nombre del ID.
@@ -43,28 +42,24 @@ Es decir, jQuery utiliza el poder de los selectores para acceder de una manera r
     ```js 
         $("#idDelElemento") // Selecciona un elemento que tiene el atributo id="idDelElemento"    
     ```    
-<br/>
 * Selector por clase (clase CSS):
     Podemos indicar el nombre de una clase y seleccionar todos los elementos a los que se ha aplicado esta clase. Para ello, como en CSS, comenzamos colocando el carácter "." y luego el nombre de la clase que deseamos seleccionar.
      Ejemplo: <br/>
     ```js 
         $(".miClase") //selecciona todos los elementos que tienen el atributo class="miClase"
     ```
-<br/>
 * Selector por varias clases:
     Si lo deseamos, podemos indicar varias clases CSS, para obtener todos los elementos que tienen esas clases aplicadas: todas al mismo tiempo. Esto se consigue comenzando por un ".", igual que los selectores de clases, y luego otro "." para separar las distintas clases que queremos utilizar en el selector.
     Ejemplo: <br/>
     ```js 
         $(".clase1.clase2") //selecciona los elementos que tienen class="clase1 clase2"
     ```
-<br/>
 * Selector asterisco "*":
     Nos sirve para seleccionar **todos** los elementos de la página.
     Ejemplo: <br/>
     ```js 
         $("*") //selecciona todos los elementos que tiene la página
     ```        
-<br/>
 * Concatenar varios selectores distintos:
     Por último, podemos utilizar varios selectores, para obtener todas las etiquetas que cumplen uno de ellos. No hace falta que cumplan todos los selectores a la vez, sino con que uno de ellos concuerde es suficiente. Para ello colocamos todos los selectores que deseamos, separados por una coma **","**.
      Ejemplo: <br/>
@@ -129,7 +124,7 @@ $("p").on("click", function(){
 YASSSS Acá se pone!!!! <br/>
  > Hide, Show, Toggle, Slide, Fade, Animate 
 
-#### Ejemplo Show/Hide
+### Ejemplo Show/Hide
 Sintáxis: `$(selector).hide(speed,callback);` `$(selector).show(speed,callback);`   
     **speed** Especifíca que tan rápido debe ocultarse o mostrarse el elemento.
     Podemos usar valoreas como `slow`, `fast` o directamente milisegundos.
@@ -151,7 +146,7 @@ $("button").click(function(){
 });
 ```
 
-#### Ejemplo Toggle
+### Ejemplo Toggle
 Con toggle podemos alternar entre `hide()` y `show()`.  
 Sintáxis: `$(selector).toggle(speed,callback);`  
 
@@ -161,8 +156,8 @@ $("button").click(function(){
 });
 ```
 
-### FADE
-#### fadeIn
+## FADE
+### fadeIn
 Sintáxis: `$(selector).fadeIn(speed,callback);`  
 
 ```js
@@ -172,7 +167,7 @@ $("button").click(function(){
     $("#div3").fadeIn(3000);
 });
 ```
-#### fadeOut
+### fadeOut
 Sintáxis: `$(selector).fadeOut(speed,callback);`  
 
 ```js
@@ -183,7 +178,7 @@ $("button").click(function(){
 });
 ```
 
-#### fadeToggle
+### fadeToggle
 Sintáxis: `$(selector).fadeToggle(speed,callback);`  
 
 ```js
@@ -194,7 +189,7 @@ $("button").click(function(){
 });
 ```
 
-#### fadeTo
+### fadeTo
 Sintáxis: `$(selector).fadeTo(speed,opacity,callback);`  
 ```js
 $("button").click(function(){
@@ -204,8 +199,8 @@ $("button").click(function(){
 });
 ```
 
-### SLIDE
-#### slideDown
+## SLIDE
+### slideDown
 Sintáxis: `$(selector).slideDown(speed,callback);`  
 
 ```js
@@ -216,7 +211,7 @@ $("#flip").click(function(){
     $("#panel").slideDown();
 });
 ```
-#### slideUp
+### slideUp
 Sintáxis: `$(selector).slideUp(speed,callback);`  
 
 ```js
@@ -227,7 +222,7 @@ $("#flip").click(function(){
     $("#panel").slideUp();
 });
 ```
-#### slideToggle
+### slideToggle
 Sintáxis: `$(selector).slideToggle(speed,callback);`  
 
 ```js
@@ -253,10 +248,11 @@ $("#p1")
 ### Animate
 Sintáxis: `$(selector).animate({params},speed,callback);`
 
-⚠️ Importante: Por default todos los elementos HTML están en posición `static`. Para poder animarlos necesito cambiar su propiedad CSS `position` posición CSS a `relative`, `fixed`, o `absolute` ⚠️
+⚠️ Importante: Por default todos los elementos HTML están en posición `static`. ⚠️  <br/>
+Para poder animarlos necesito cambiar su propiedad CSS `position` posición CSS a `relative`, `fixed`, o `absolute` 
 <br/>
 
-### Ejemplos:  
+#### Ejemplos:  
 
 ```js
 <div style="position:absolute;" />
@@ -280,7 +276,7 @@ $("button").click(function(){
 }); 
 ```  
 
-##### Valores relativos?
+#### Valores relativos?
 Valores relativos al valor actual del elemento. 
 Utilizo `+=`
 
@@ -295,7 +291,7 @@ $("button").click(function(){
 }); 
 ```
 
-##### Combinar toggle, hide o show
+#### Combinar toggle, hide o show
 ```js
 <div style="position:absolute;" />
 $("button").click(function(){
@@ -305,7 +301,7 @@ $("button").click(function(){
 }); 
 ```
 
-##### Cómo cortar una animación? STOP 🛑
+#### Cómo cortar una animación? STOP 🛑
 
 ```js
 $("#stop").click(function(){
