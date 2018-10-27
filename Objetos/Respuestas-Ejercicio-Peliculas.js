@@ -142,7 +142,7 @@ agregarPelicula(peli7);
 // ------------- Cómo ordenar un array? SORT ------------------------------------------------
 // ------------------------------------------------------------------------------------------
 // 1) Definir un criterio de ordenamiento => Una función
-// Por definición ésta función va a recibir dos parametros (SORT se encargará de pasárselos)
+// Esta función va a recibir dos parametros (SORT se encargará de pasárselos) que va a ir comparando
 function ordenarPorTitulo(peli1, peli2) {
   // Defino el criterio de orden
   if (peli1.titulo < peli2.titulo) return -1;
@@ -153,7 +153,7 @@ function ordenarPorTitulo(peli1, peli2) {
 
 // 2) Llamar a SORT sobre el array que queremos ordenar
 // El método sort RECIBE el criterio de ordenamiento => el criterio es una FUNCION
-peliculas.sort(ordenarPorTitulo); // El array de películas lo tenemos definido más arriba (línea 127)
+peliculas.sort(ordenarPorTitulo); // El array de películas lo tenemos definido más arriba (línea 91)
 console.log(peliculas);
 // -----------------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------------
@@ -179,6 +179,11 @@ function borrarPelicula(pelicula) {
   console.log("Indice a borrar:", indice);
   // 1) Borro esa posicion del array
   peliculas.splice(indice, 1);
+  
+  // Atajando bugs: Qué pasa si la película no existe? Probá ese caso y fijate qué pasa.
+  // Agregá validar que la película exista en el array para borrarla.
+  // Y si lo haces en una función? y cada vez que tengas que validar si la película 
+  // ya existe, llamás a esa función? YASSSS GRRRLLL!!!
 }
 borrarPelicula(peli1);
 console.log(peliculas);
