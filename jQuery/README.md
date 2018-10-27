@@ -1,4 +1,4 @@
-#jQuery  
+# jQuery  
 En esta clase aprenderemos qué es jQuery, selectores y empezaremos a manipular el dom 🎉 
 ---
 
@@ -12,11 +12,11 @@ Todo el poder de jQuery se lo da JS. Si entendiste bien cómo manipular el DOM c
 
 ## Cómo agrego jQuery a mi proyecto?
 * Mediante una etiqueta script en nuestro HTML haciendo referencia a un link CDN(*).
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    `<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>`
 * Utilizando una versión local. Es decir, debemos descargarla localmente y servirla.
-    <script src="js/jquery-1.11.0.min.js"></script>
+    `<script src="js/jquery-1.11.0.min.js"></script>`
 <br/>
-(*) CDN: Content delivery network o content distribution network.<br/>
+> (*) CDN: Content delivery network o content distribution network.<br/>
 Servidores que nos brindan las librerías sin necesidad de tenerlas localmente.
 ---
 
@@ -106,7 +106,7 @@ $("#p1").mouseleave(function(){
     alert("Saliste del parrafo!");
 });
 ```
-##### Puedo dinámicamente cambiar o agregar propiedades de css 🧙‍♀️
+##### Puedo dinámicamente cambiar o agregar propiedades de css 🧙‍
 ```js
 $("input").focus(function(){
     $(this).css("background-color", "#cccccc");
