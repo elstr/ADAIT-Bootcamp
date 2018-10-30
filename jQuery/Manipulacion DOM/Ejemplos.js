@@ -39,8 +39,7 @@ function render(productos = misProductos) {
     var categoria = "<td>" + productos[i].categoria + "</td>";
     var precio = "<td>" + productos[i].precio + "</td>";
 
-    var btnDelete = $("<button>Delete<button>");
-    btnDelete.on("click", function() {
+    var btnDelete = $("<button>Delete<button>").on("click", function() {
       deleteProduct(productos[i]);
     });
 

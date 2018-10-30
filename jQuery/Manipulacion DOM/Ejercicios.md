@@ -13,11 +13,14 @@ Cada cancion tiene nombre, autor, genero
 Ese objeto deberá pasar al array de canciones escuchadas
 Borrar el objeto del array de canciones posibles de escuchar
 
-3) Agregar canciones dinámicamente 
+3) Filtrado
+- Agregar un botón en la parte superior que me permita filtrar las canciones por `genero`
+
+4) Agregar canciones dinámicamente 
 - Renderizar arriba de todo 
-Nombre - <input>
-Autor - <input>
-Genero - <input>
+    - Nombre - `<input>`
+    - Autor - `<input>`
+    - Genero - `<input>`
 - Agregar un botón que sea agregar canción
 - Validar cuando quiero agregar la canción que todos los campos estén completos
 - Agregar la canción al array de canciones 
