@@ -17,7 +17,8 @@ listaProductos.append(coca);
 <br/>
 Y qué pasa si tenemos una lista de productos y en vez de agregarlos uno por uno los agregamos recorriendo la lista? Y si en vez de armar una lista armamos una tabla?
 <br/>
-Acá empezamos a entender el **poder** de agregar nodos **dinámicamente**
+Acá empezamos a entender el **poder** de agregar nodos **dinámicamente**  <br/>
+
 ```js
 var misProductos = [
 {nombre: "Fernet", categoria: "Bebida Espirituosa", precio: 250},
