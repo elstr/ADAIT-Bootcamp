@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejemplos</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(document).ready(function () {
+      console.log("ready!");
+
+      $("button.continue").html("Next Step...")
+
+      var banner = $("#banner");
+      $("#button-container button").on("click", function (event) {
+        banner.hide();
+        console.log(banner)
+      });
+
+      $("button.hideP").click(function () {
+        $("p.hide").toggle("slow");
+        // $("p.hide").toggle(1000);
+      });
+      $("button.fade").click(function () {
+        $("#div1").fadeOut();
+        $("#div2").fadeOut("slow");
+        $("#div3").fadeOut(3000);
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(3000);
+      });
+    });
+
+  </script>
+</head>
+
+<body>
+  
+  <br/>
+  <br/>
+  <button class="fade">Button fade</button>
+  <div id="div1">div 1</div>
+  <div id="div2">div 2</div>
+  <div id="div3">div 3</div>
+  <br />
+  <br />
+  <button class="continue">Boton con texto que cambia</button>
+  <button class="hideP">Este button oculta el P de abajo</button>
+  <p class="hide">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita molestias esse sint fugiat
+    architecto, fuga dolore eius similique repudiandae vitae laboriosam</p>
+  <p id="banner">Mostrando mensaje</p>
+  <div id="button-container">
+    <button>Ocultar mensaje</button>
+  </div>
+</body>
+
+</html>

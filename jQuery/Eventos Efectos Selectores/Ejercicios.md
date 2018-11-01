@@ -1,11 +1,12 @@
 ## Selectores y Evento Click
 1) Ocultar párrafo  
-    Crear un <p> y un <button>. Al momento de clickear el button deberá ocultar el párrafo.
+    Crear un `<p>` y un `<button>`. Al momento de clickear el button deberá ocultar el párrafo.
 2) Ocultar button  
-    Crear un <button> y en el evento click del botón ocultarlo.
+    Crear un `<button>` y en el evento click del botón ocultarlo.
 3) Ocultar filas impares
-    Armar una <table> con 5 filas.  
-    Agregar un <button> y en el evento click llamar a una función que oculte todas las filas impares.
+    Armar una `<table>` con 5 filas.
+    jquery odd / jquery even  
+    Agregar un `<button> y en el evento click llamar a una función que oculte todas las filas impares.
 
 ## Eventos
 1) Cambiar el color de fondo de un párrafo dinámicamente cuando sucedan los siguientes eventos:
@@ -21,7 +22,7 @@
 
 
 ### Lista de articulos
-* Crearse varias clases con background-color, fuentes, tamaños y colores
+* Crear varias clases con background-color, fuentes, tamaños y colores
 * Crear una noticia / artículo
 * Incluir un boton que agregue articulos con distintas clases, para hacer de estos distintos uno del otro.
 

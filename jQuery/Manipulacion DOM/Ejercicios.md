@@ -25,8 +25,3 @@ Borrar el objeto del array de canciones posibles de escuchar
 - Validar cuando quiero agregar la canción que todos los campos estén completos
 - Agregar la canción al array de canciones 
 - Renderizar las canciones 
-
-
-
-
-

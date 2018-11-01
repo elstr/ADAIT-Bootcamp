@@ -33,6 +33,7 @@ Es decir, jQuery utiliza el poder de los selectores para acceder de una manera r
     Ejemplo: <br/>
     ```js
         $("h1") // Selecciona todos los encabezados de nivel 1
+        $("p") // Selecciona todos los parrafos
     ```
 * Selector por **identificador**:
     Sirven para seleccionar elementos que tengan un ID definido.
