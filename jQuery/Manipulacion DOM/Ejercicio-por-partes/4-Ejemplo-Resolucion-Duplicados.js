@@ -2,13 +2,7 @@ let canciones = [
   { nombre: "moscas en la casa", autor: "Shakira", genero: "pop" },
   { nombre: "Edge of Glory", autor: "Lady Gaga", genero: "pop" },
   { nombre: "Back in Black", autor: "AC/DC", genero: "rock" },
-  { nombre: "No se tu", autor: "Luismi", genero: "Latin" },
-  {
-    nombre: "ponerte en 4",
-    autor: "Los amigos invisibles",
-    genero: "latin pop"
-  },
-  { nombre: "Bodak Yellow", autor: "Carbi B", genero: "HipHop" }
+  { nombre: "No se tu", autor: "Luismi", genero: "Latin" }
 ];
 
 function crearTabla() {

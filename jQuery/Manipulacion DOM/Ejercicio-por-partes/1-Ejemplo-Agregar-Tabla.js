@@ -2,6 +2,7 @@
 // Defino mi array de canciones
 // ------------------------------------
 let canciones = [
+  { nombre: "moscas en la casa", autor: "Shakira", genero: "pop" },
   { nombre: "Edge of Glory", autor: "Lady Gaga", genero: "pop" },
   { nombre: "Back in Black", autor: "AC/DC", genero: "rock" },
   { nombre: "No se tu", autor: "Luismi", genero: "Latin" }
