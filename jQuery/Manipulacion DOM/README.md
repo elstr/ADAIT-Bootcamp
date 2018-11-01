@@ -34,7 +34,7 @@ table.append(headers)
 var container = $("div.table-container")
 container.append(table)
 // Dentro del for agrego la data de la tabla recorriendo mis productos
-for(var i = 0; i <= misProductos.length; i++){
+for(var i = 0; i < misProductos.length; i++){
 // String interpolation ${} => Armo una cadena string sin la necesidad de concatenar de manera clasica con + espacio +
 var nombre = `<td>${misProductos[i].nombre}</td>`
 var categoria = `<td>${misProductos[i].categoria}</td>`
