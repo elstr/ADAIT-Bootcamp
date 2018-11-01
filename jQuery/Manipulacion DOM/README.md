@@ -40,7 +40,13 @@ var nombre = `<td>${misProductos[i].nombre}</td>`
 var categoria = `<td>${misProductos[i].categoria}</td>`
 var precio = `<td>${misProductos[i].precio}</td>`
 
-    var fila = '<tr></tr>'
+// Hago append de mis td a la fila
+var fila = $('<tr></tr>')
+fila.append(nombre)
+fila.append(categoria)
+fila.append(precio)
 
+// Hago append de la fila a la tabla
+table.append(fila)
 }
 ```
