@@ -12,8 +12,23 @@
 </head>
 
 <body>
-    <div class="table-canciones">
+    <form class="form-agregar-cancion">
+        <input type="text" name="nombre" placeholder="Nombre de la canción">
+        <input type="text" name="autor" placeholder="Autor">
+        <input type="text" name="genero" placeholder="Género de la canción">
 
+        <button>Agregar canción</button>
+
+        <p id="mensaje-error"></p>
+    </form>
+
+    <form class="form-filtrar-canciones">
+        <input type="text" name="genero" placeholder="Genero a buscar">
+        <button type="submit">Filtrar</button>
+        <button type="reset">Limpiar</button>
+    </form>
+
+    <div class="table-canciones">
     </div>
     <div class="table-canciones-escuchadas">
     </div>

@@ -65,12 +65,17 @@ function marcarComoEscuchada(cancion) {
   renderizarTablaCancionesEscuchadas();
 }
 
-function render() {
+function render(cancionesAMostrar) {
+  // si canciones es undefined, porque no me pasaron nada por parametros, uso lo que tengo en canciones
+  if (!cancionesAMostrar) {
+    cancionesAMostrar = canciones;
+  }
+
   var tabla = $("#tablaCanciones");
-  for (let i = 0; i < canciones.length; i++) {
-    var nombre = canciones[i].nombre;
-    var autor = canciones[i].autor;
-    var genero = canciones[i].genero;
+  for (let i = 0; i < cancionesAMostrar.length; i++) {
+    var nombre = cancionesAMostrar[i].nombre;
+    var autor = cancionesAMostrar[i].autor;
+    var genero = cancionesAMostrar[i].genero;
 
     var tdNombre = "<td>" + nombre + "</td>";
     var tdAutor = "<td>" + autor + "</td>";
@@ -78,12 +83,12 @@ function render() {
 
     var btnDelete = $("<button>Delete</button>");
     btnDelete.on("click", function() {
-      borrarCancion(canciones[i]);
+      borrarCancion(cancionesAMostrar[i]);
     });
 
     var btnEscuchada = $("<button>Ya la escuche!</button>");
     btnEscuchada.on("click", function() {
-      marcarComoEscuchada(canciones[i]);
+      marcarComoEscuchada(cancionesAMostrar[i]);
     });
 
     // si no tengo el nodo en mi html
@@ -127,8 +132,113 @@ function renderizarTablaCancionesEscuchadas() {
   }
 }
 
+function agregarCancion () {
+  // oculto el mensaje de error
+  $('#mensaje-error').hide();
+
+  // primero voy a buscar los inputs del formulario
+  let inputNombre = $('.form-agregar-cancion input[name="nombre"]');
+  let inputAutor = $('.form-agregar-cancion input[name="autor"]');
+  let inputGenero = $('.form-agregar-cancion input[name="genero"]');
+
+  // de cada input, con .val() puedo obtener el valor que escribimos por teclado
+  let nombreNuevaCancion = inputNombre.val();
+  let autorNuevaCancion = inputAutor.val();
+  let generoNuevaCancion = inputGenero.val();
+
+  // si hay algun input que no este completo, muestro el mensaje de error al usuario
+  if (nombreNuevaCancion === '' || autorNuevaCancion === '' || generoNuevaCancion === '') {
+    $('#mensaje-error').text('Todos los campos son obligatorios').css('color', 'red').show();
+    // y finalmente retorno porque no puedo seguir ejecutando la funcion si no tenemos todos los datos
+    return;
+  }
+
+  // creo el nuevo objeto, con la info que sacamos del input
+  let nuevaCancion = {
+   nombre: nombreNuevaCancion,
+   autor: autorNuevaCancion,
+   genero: generoNuevaCancion,
+  };
+
+  // agrego el nuevo objeto cancion al array de canciones
+  canciones.push(nuevaCancion);
+
+  // como modifique el array de canciones, tengo que volver a limpiar la tabla y volver a generar
+  limpiarTabla();
+  render();
+
+  // al final, vacio los 3 inputs
+  inputNombre.val('');
+  inputAutor.val('');
+  inputGenero.val('');
+}
+
+// en esta funcion simplemente agrego el evento para el submit del formulario
+function crearFormularioAgregarCancion () {
+  $('#mensaje-error').hide();
+
+  $('.form-agregar-cancion').on('submit', function (e) {
+    e.preventDefault();
+    // y cuando se hace el submit del formulario llamo a mi funcion agregarCancion
+    agregarCancion();
+  })
+}
+
+function filtrarCanciones () {
+  // primero voy a buscar el input donde escribimos el genero
+  let inputGenero = $('.form-filtrar-canciones input[name="genero"]');
+  // con .val() puedo obtener el valor que escribimos por teclado
+  let generoAFiltrar = inputGenero.val();
+
+  // si el genero esta vacio, directamente mostramos de nuevo TODAS las canciones
+  if (generoAFiltrar === '') {
+    limpiarTabla();
+    render();
+    return;
+  }
+
+  // filtro las canciones que cumplen con la condicion de tener el mismo genero que estoy filtrando
+  cancionesFiltradas = canciones.filter(function (c) {
+    return c.genero === generoAFiltrar;
+  })
+
+  // OPCION: esto tambien se resuelve con un for, clasico, sin mas vueltas
+  // cancionesFiltradas = [];
+  // for (var i = 0; i < canciones.length; i++) {
+  //   if (canciones[i].genero === generoAFiltrar) {
+  //     cancionesFiltradas.push(canciones[i]);
+  //   }
+  // }
+
+  // como modifique el array de canciones, tengo que volver a limpiar la tabla y volver a generar
+  limpiarTabla();
+  // en este caso, a la funcion render le vamos a decir que canciones queremos que muestre
+  // para eso, tambien vamos a modificar la funcion render
+  render(cancionesFiltradas);
+}
+
+// en esta funcion simplemente agrego el evento para el submit del formulario de filtro
+function crearFormularioFiltro () {
+  let formFiltrarCanciones = $('.form-filtrar-canciones');
+  formFiltrarCanciones.on('submit', function (e) {
+    e.preventDefault();
+    // y cuando se hace el submit del formulario llamo a mi funcion agregarCancion
+    filtrarCanciones();
+  })
+
+  formFiltrarCanciones.on('reset', function (e) {
+    e.preventDefault();
+    // en el limpiar, lo que hacemos es borrar lo que tiene el input de filtro, y hacer la busqueda
+    $('.form-filtrar-canciones input[name="genero"]').val('');
+    // y cuando se hace el submit del formulario llamo a mi funcion agregarCancion
+    filtrarCanciones();
+  })
+}
+
 crearTabla();
 crearTablaCancionesEscuchadas();
+crearFormularioAgregarCancion();
+crearFormularioFiltro();
 
 // subir ejercicio por partes
 // subir ejercicio completo
