@@ -1,0 +1,36 @@
+.tablero {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tablero .numero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 10%;
+  min-width: 100px;
+  font-size: 2em;
+  margin: 5px;
+}
+
+.tablero .numero:nth-child(even) {
+  background-color: #cccccc;
+}
+
+.tablero .numero:nth-child(odd) {
+  background-color: #E3D0CC;
+}
+
+.tablero .numero:before {
+  content:'';
+  float:left;
+  padding-top:100%;
+}
+
+.tablero .numero span {
+  display: none;
+}
+
+.tablero .numero.mostrar span {
+  display: block;
+}
