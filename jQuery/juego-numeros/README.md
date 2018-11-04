@@ -1,0 +1,2 @@
+Queremos hacer un juego donde se le muestren a una persona N cajitas con numeros, que en un principio van a estar ocultos.
+Cada vez que la persona haga click en una cajita, se le mostrará el numero oculto. El juego termina cuando la persona logra hacer click en el número 1 (uno). En ese momento, se le muestra un cartel con el mensaje 'Ganaste en X clicks!'.
