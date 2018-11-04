@@ -49,19 +49,19 @@ console.log(arrayJson);
 ## Valores posibles
 
 En JSON podemos utilizar alguno de los siguientes tipos: 
-    - String
-    - Numero
-    - Objeto
-    - Array
-    - Booleano
-    - Null
+    * String
+    * Numero
+    * Objeto
+    * Array
+    * Booleano
+    * Null
 
 <br/>
 JSON es más restrictivo que javascript. 
-    - Todos los valores `strings` deben ir entre comillas dobles 
-    - Las comillas simples no están permitidas 
-    - No hay ningún tipo de comentario en un JSON 
-    - No se admiten valores `undefined`
+    * Todos los valores `strings` deben ir entre comillas dobles 
+    * Las comillas simples no están permitidas 
+    * No hay ningún tipo de comentario en un JSON 
+    * No se admiten valores `undefined`
 
 ## Intercambiando Data
 
@@ -70,7 +70,7 @@ JSON es texto y podemos convertir objetos de JavaScript en JSON y ese JSON al se
 También podemos convertir JSON que recibimos del servidor a objetos JavaScript <br/>
 
 ### Enviando información
-##### STRINGIFY
+#### STRINGIFY
 
 Para enviar información en formato JSON podemos utilizar **stringify** para convertir nuestra estructura.
 Copiar y pegar el siguiente ejemplo en la consola de nuestro navegador:
@@ -81,7 +81,7 @@ var usuarioJSON = JSON.stringify(usuarioActivo);
 ```
 
 ### Convertir JSON a lo que era ?
-##### PARSE
+#### PARSE
 Supongamos que hemos convertido un objeto a JSON porque necesitamos enviarlo al servidor y el servidor nos responde con el mismo objeto pero con más propiedades populadas. <br/>
 Cómo convierto un JSON a un objeto javascript? Utilizamos **parse**
 
