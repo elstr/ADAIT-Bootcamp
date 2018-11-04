@@ -17,19 +17,14 @@ A nivel sintáctico es muy parecido a un objeto de javascript pero es un **strin
 // --------------------------------------------------------
 // Así declaramos un objeto básico en Javascript
 // --------------------------------------------------------
-let objeto = { propiedad: "valor" };
+let objeto = { 
+    nombre:"Ada",
+    owners:["Celeste","Ezequiel"],
+    profesores:["Juan","Lele"],
+    ayudantes:{nombre:"Stefania",apellido:"La Uno"}
+};
 // --------------------------------------------------------
-// Así declaramos un array JSON conteniendo muchos objetos
-// --------------------------------------------------------
-const arrayJson = `[
-  { "id": "1", "nombre": "coca cola"},
-  { "id": "3", "nombre": "fanta"},
-  { "id": "5", "nombre": "manaos"}
-]`;
-
-console.log(arrayJson);
-// --------------------------------------------------------
-// Un JSON válido puede ser un array o puede ser un objeto
+// Mismo objeto pero JSON
 // --------------------------------------------------------
 const objetoJson = `
     {
@@ -39,6 +34,16 @@ const objetoJson = `
         "ayudantes":{"nombre":"Stefania","apellido":"La Uno"}
     }`;
 console.log(objetoJson);
+// --------------------------------------------------------
+// Así declaramos un array JSON conteniendo muchos objetos
+// --------------------------------------------------------
+const arrayJson = `[
+  { "id": "1", "nombre": "coca cola"},
+  { "id": "3", "nombre": "fanta"},
+  { "id": "5", "nombre": "manaos"}
+]`;
+console.log(arrayJson);
+
 ```
 
 ## Valores posibles
