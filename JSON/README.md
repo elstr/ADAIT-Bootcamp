@@ -85,7 +85,7 @@ console.log("Usuario convertido a JSON", usuarioJSON)
 
 ### Convertir JSON a lo que era ?
 #### PARSE
-Supongamos que hemos convertido un objeto a JSON porque necesitamos enviarlo al servidor y el servidor nos responde con el mismo objeto pero con más propiedades populadas. <br/>
+Supongamos que hemos convertido un objeto a JSON porque necesitamos enviarlo al servidor y el servidor nos responde devolviendonos el objeto en formato JSON. <br/>
 Cómo convierto un JSON a un objeto javascript? Utilizamos **parse**
 
 ```js
