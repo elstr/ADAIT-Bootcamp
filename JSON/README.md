@@ -71,10 +71,10 @@ JSON es texto y podemos convertir objetos de JavaScript en JSON y ese JSON envia
 Y viseversa, podemos convertir JSON que recibimos del servidor a objetos JavaScript <br/>
 
 ### Enviando información
+*Copiar y pegar el siguiente ejemplo en la consola de nuestro navegador* <br/>
 #### STRINGIFY
 
 Para enviar información en formato JSON podemos utilizar **stringify** para convertir nuestra estructura. <br/>
-Copiar y pegar el siguiente ejemplo en la consola de nuestro navegador:
 
 ```js
 var usuarioActivo = { usuario: "elstr", age: 30, city: "caba" };
