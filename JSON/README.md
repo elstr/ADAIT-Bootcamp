@@ -65,7 +65,8 @@ JSON es más restrictivo que javascript.
 
 ## Intercambiando Data
 
-> Cuando intercambiamos data entre navegador y servidor, la data **solo** puede ser texto. 
+> Cuando intercambiamos data entre navegador y servidor, la data **solo** puede ser texto.  
+
 JSON es texto y podemos convertir objetos de JavaScript en JSON y ese JSON enviarlo al servidor. <br/>
 Y viseversa, podemos convertir JSON que recibimos del servidor a objetos JavaScript <br/>
 
