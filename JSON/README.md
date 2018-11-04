@@ -72,12 +72,14 @@ También podemos convertir JSON que recibimos del servidor a objetos JavaScript 
 ### Enviando información
 #### STRINGIFY
 
-Para enviar información en formato JSON podemos utilizar **stringify** para convertir nuestra estructura.
+Para enviar información en formato JSON podemos utilizar **stringify** para convertir nuestra estructura. <br/>
 Copiar y pegar el siguiente ejemplo en la consola de nuestro navegador:
 
 ```js
 var usuarioActivo = { usuario: "elstr", age: 30, city: "caba" };
+console.log("Usuario Activo", usuarioActivo)
 var usuarioJSON = JSON.stringify(usuarioActivo);
+console.log("Usuario convertido a JSON", usuarioJSON)
 ```
 
 ### Convertir JSON a lo que era ?
@@ -88,7 +90,11 @@ Cómo convierto un JSON a un objeto javascript? Utilizamos **parse**
 ```js
 // Supongamos que recibimos el usuario previamente definido
 var usuarioActivo = { usuario: "elstr", age: 30, city: "caba" };
+console.log("Usuario Activo", usuarioActivo)
 var usuarioJSON = JSON.stringify(usuarioActivo);
+console.log("Usuario convertido a JSON", usuarioJSON)
 var usuarioParsed = JSON.parse(usuarioJSON);
+console.log("Usuario convertido de JSON a objeto javascript", usuarioParsed)
 usuarioParsed.telefonos = [{area: 54911, numero: 40395233}]
+console.log("Usuario modificado", usuarioParsed)
 ```
