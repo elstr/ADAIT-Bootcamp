@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Peliculas</title>
+</head>
+
+<body>
+    <!-- Inicio -->
+    <input type="text" placeholder="Nombre Pelicula" id="inputNombre">
+    <input type="text" placeholder="Director" id="inputDirector">
+    <input type="text" placeholder="Genero" id="inputGenero">
+    <input type="number" placeholder="Rating" min="0" max="10" id="inputRating">
+    <button onclick="agregarPelicula()">Agregar Pelicula</button>
+    <table id="listaPeliculas"></table>
+    <!-- Fin -->
+
+    <!-- Cargamos nuestros scripts al final junto con jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
