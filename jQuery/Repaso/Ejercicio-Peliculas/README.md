@@ -9,26 +9,26 @@ Metodos a utilizar en este ejercicio:
 
 Dentro de mi archivo index.js definir de forma global un array misPeliculas, debe estar vacio
 
-Dentro de mi archivo HTML agregar
-    * Un input con placeholder Nombre Pelicula
-        * Tipo texto
-        * ID "inputNombre"
-    * Un input con placeholder Director
-        * Tipo texto
-        * ID "inputDirector"
-    * Un input con placeholder Genero
-        * Tipo texto
-        * ID "inputGenero"
-    * Un input con placeholder Rating
-        * Tipo number
-        * Debe ir de 0 a 10 
-        * ID "inputRating"
-    * Un p vacio
-        * ID "error"
-    * Un boton
-        * Texto "Agregar"
-    * Una tabla 
-        * ID "listaPeliculas"
+Dentro de mi archivo HTML agregar:
+* Un input con placeholder Nombre Pelicula
+    * Tipo texto
+    * ID "inputNombre"
+* Un input con placeholder Director
+    * Tipo texto
+    * ID "inputDirector"
+* Un input con placeholder Genero
+    * Tipo texto
+    * ID "inputGenero"
+* Un input con placeholder Rating
+    * Tipo number
+    * Debe ir de 0 a 10 
+    * ID "inputRating"
+* Un p vacio
+    * ID "error"
+* Un boton
+    * Texto "Agregar"
+* Una tabla 
+    * ID "listaPeliculas"
 
 Cuando clickeo en el botón agregar llamar a una funcion agregarPelicula
 
