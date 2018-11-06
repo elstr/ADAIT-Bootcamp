@@ -1,4 +1,4 @@
-Metodos a utilizar en este ejercicio:
+### Metodos a utilizar en este ejercicio:
 - append (jQuery)
 - remove (jQuery)
 - text (jQuery)
@@ -6,8 +6,8 @@ Metodos a utilizar en este ejercicio:
 - splice (JS)
 - replace (JS)
 
-
-Dentro de mi archivo `index.js` definir de forma `global` un array `misPeliculas`, debe estar vacio
+### Enunciado
+Dentro de mi archivo `index.js` definir de forma `global` un array `misPeliculas`, debe estar vacio. <br/>
 
 Dentro de mi archivo HTML agregar:
 * Un input con placeholder Nombre Pelicula
@@ -30,7 +30,7 @@ Dentro de mi archivo HTML agregar:
 * Una tabla 
     * ID "listaPeliculas"
 
-Cuando clickeo en el botón agregar llamar a una funcion agregarPelicula
+Cuando clickeo en el botón agregar llamar a una funcion agregarPelicula.
 
 Dentro de la funcion `agregarPelicula` crear un objeto pelicula con las propiedades `nombre, director, genero y rating`. El valor para dichas propiedades debe ser tomado de los inputs del HTML `( utilizar selectores por ID para recuperar los valores, $("#inputNombre") )`
 
@@ -53,17 +53,17 @@ Caso contrario, mostrar en el tag `p` del HTML con id error que hubo un error
 
 Definir otra funcion que se llame mostrarPeliculas
 
-Dentro de la funcion `mostrarPeliculas` agregar un `for` para iterar el array de peliculas
-Mostrar en un `console.log`, dentro del for, cada objeto pelicula. 
+Dentro de la funcion `mostrarPeliculas` agregar un `for` para iterar el array de peliculas. <br/>
+Mostrar en un `console.log`, dentro del for, cada objeto pelicula.  <br/>
 ⚠️ Verificar en consola.
 
-Dentro del for usar `jQuery` para crear un table row (`tr`) con la clase `fila` y su `id` debe ser `"fila"+nombrePelicula` => quitarle los espacios al nombre de la pelicula => `filaLoqueelvientosellevo` => usar `replace`
+Dentro del for usar `jQuery` para crear un table row (`tr`) con la clase `fila` y su `id` debe ser `"fila"+nombrePelicula` => quitarle los espacios al nombre de la pelicula => `filaLoqueelvientosellevo` => usar `replace` <br/>
 
 
-Debajo de la fila que definimos con jQuery, crear 3 table data (td) y asignarle al primer td nombre, al segundo director y al tercero rating
-Ejemplo: `"<td>"+ misPeliculas[i].nombre +"</td>"`
+Debajo de la fila que definimos con jQuery, crear 3 table data (td) y asignarle al primer td nombre, al segundo director y al tercero rating <br/>
+Ejemplo: `"<td>"+ misPeliculas[i].nombre +"</td>"` <br/>
 
-Agregarle a la fila los 3 `td` (usar `append`)
+Agregarle a la fila los 3 `td` (usar `append`) <br/>
 
 Dentro de la funcion `agregarPelicula`, al final de todo, llamar a la funcion `mostrarPeliculas`
 
@@ -85,10 +85,14 @@ En la funcion `mostrarPeliculas`, en el `checkbox`, agregarle un handler (funcio
 
 ⚠️ Verificar en consola 
 
-Cuando clickeamos el boton de `borrar`, hay que borrar la pelicula del array y del HTML
+Cuando clickeamos el boton de `borrar`, hay que borrar la pelicula del array y del HTML.
+<br/>
 ⚠️ Verificar que en el HTML se borra la pelicula
+<br/>
 ⚠️ Verificar con un `console.log` que se borra la pelicula del array 
 
 Cuando clickeamos el checkbox, hay que tachar la pelicula en el HTML y al objeto cambiarle la propiedad vista a true
+<br/>
 Buscar la pelicula por `id`
+<br/>
 Recuperar el indice del array con `findIndex`
