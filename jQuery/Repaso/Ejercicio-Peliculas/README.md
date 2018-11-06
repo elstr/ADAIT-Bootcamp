@@ -55,7 +55,7 @@ Definir otra funcion que se llame mostrarPeliculas
 
 Dentro de la funcion `mostrarPeliculas` agregar un `for` para iterar el array de peliculas
 Mostrar en un `console.log`, dentro del for, cada objeto pelicula. 
-Verificar en consola.
+⚠️ Verificar en consola.
 
 Dentro del for usar `jQuery` para crear un table row (`tr`) con la clase `fila` y su `id` debe ser `"fila"+nombrePelicula` => quitarle los espacios al nombre de la pelicula => `filaLoqueelvientosellevo` => usar `replace`
 
@@ -73,21 +73,21 @@ Dentro de la funcion `agregarPelicula` modificar el objeto pelicula creado y agr
 
 Dentro de la funcion `mostrarPeliculas`, adentro del `for`, ademas de los 3 td, crear con jQuery un boton `"borrar"` y un `checkbox`
 
-Hacer append del boton a la fila y hacer prepend del checkbox a la fila 
+Hacer `append` del boton a la fila y hacer `prepend` del checkbox a la fila 
 
-Verificar que se muestran bien en el HTML
+⚠️ Verificar que se muestran bien en el HTML
 
 En la funcion `mostrarPeliculas`, en el boton `borrar`, agregarle un handler (funcion) al evento `click`. Dentro del handler hacer un `console.log` mostrando `"clickeaste el boton"`
 
-Verificar en consola 
+⚠️ Verificar en consola 
 
 En la funcion `mostrarPeliculas`, en el `checkbox`, agregarle un handler (funcion) al evento `click`. Dentro del handler hacer un `console.log` mostrando "marcaste el checkbox"
 
-Verificar en consola 
+⚠️ Verificar en consola 
 
 Cuando clickeamos el boton de `borrar`, hay que borrar la pelicula del array y del HTML
-Verificar que en el HTML se borra la pelicula
-Verificar con un console log que se borra la pelicula del array 
+⚠️ Verificar que en el HTML se borra la pelicula
+⚠️ Verificar con un `console.log` que se borra la pelicula del array 
 
 Cuando clickeamos el checkbox, hay que tachar la pelicula en el HTML y al objeto cambiarle la propiedad vista a true
 Buscar la pelicula por `id`
