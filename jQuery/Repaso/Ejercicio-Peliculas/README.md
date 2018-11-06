@@ -44,7 +44,9 @@ Dentro de la funcion `agregarPelicula` llamar a una `funcion` que valide:
 * Genero no puede estar vacio 
 * Genero no puede ser distinto a "Ficcion" o "Drama" o "Comedia"
 * Numero ingresado no sea mayor a 10
-Si todas las validaciones estan OK entonces agregar la pelicula al array
+<br/>
+Si todas las validaciones estan OK entonces agregar la pelicula al array.
+<br/>
 Caso contrario, mostrar en el tag `p` del HTML con id error que hubo un error
 
 -----------------------------------------------------------------------------
