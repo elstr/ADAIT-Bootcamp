@@ -57,7 +57,7 @@ Dentro de la funcion `mostrarPeliculas` agregar un `for` para iterar el array de
 Mostrar en un `console.log`, dentro del for, cada objeto pelicula. 
 Verificar en consola.
 
-Dentro del for usar `jQuery` para crear un table row (`tr`) con la clase `fila` y su `id` debe ser `"fila"+nombrePelicula` => quitarle los espacios al nombre de la pelicula => "filaLoqueelvientosellevo" => usar `replace`
+Dentro del for usar `jQuery` para crear un table row (`tr`) con la clase `fila` y su `id` debe ser `"fila"+nombrePelicula` => quitarle los espacios al nombre de la pelicula => `filaLoqueelvientosellevo` => usar `replace`
 
 
 Debajo de la fila que definimos con jQuery, crear 3 table data (td) y asignarle al primer td nombre, al segundo director y al tercero rating
