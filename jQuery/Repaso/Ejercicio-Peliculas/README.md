@@ -39,11 +39,11 @@ Dentro de la funcion agregarPelicula, agregar la pelicula al array `(usando push
 Cuando se agrega una pelicula los input box del html se deben limpiar
 
 Dentro de la funcion `agregarPelicula` llamar a una `funcion` que valide:
-    - Nombre no puede estar vacio
-    - Director no puede estar vacio
-    - Genero no puede estar vacio 
-    - Genero no puede ser distinto a "Ficcion" o "Drama" o "Comedia"
-    - Numero ingresado no sea mayor a 10
+* Nombre no puede estar vacio
+* Director no puede estar vacio
+* Genero no puede estar vacio 
+* Genero no puede ser distinto a "Ficcion" o "Drama" o "Comedia"
+* Numero ingresado no sea mayor a 10
 Si todas las validaciones estan OK entonces agregar la pelicula al array
 Caso contrario, mostrar en el tag `p` del HTML con id error que hubo un error
 
