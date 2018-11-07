@@ -2,6 +2,7 @@
 - append (jQuery)
 - remove (jQuery)
 - text (jQuery)
+- attr (jQuery)
 - findIndex (JS)
 - splice (JS)
 - replace (JS)
