@@ -78,3 +78,14 @@ function validarPelicula() {
   }
   return true;
 }
+
+function borrarPelicula(pelicula) {
+  var indice = misPeliculas.findIndex(p => p.nombre === pelicula.nombre);
+  misPeliculas.splice(indice, 1);
+  mostrarPeliculas();
+}
+function marcarPelicula(pelicula) {
+  pelicula.vista = true;
+  idFila = "#fila" + pelicula.nombre.replace(" ", "");
+  $(idFila).css("text-decoration", "line-through");
+}
