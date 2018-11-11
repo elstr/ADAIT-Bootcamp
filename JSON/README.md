@@ -1,7 +1,7 @@
 # JSON
 
 JSON o JavaScript Object Notation es un formato ligero para almacenar o transportar data. <br/>
-A nivel sintáctico es muy parecido a un objeto de javascript pero es un **string** <br/>
+A nivel sintáctico es muy parecido a un objeto de javascript pero se wrappea en un **string**  y todos su pares **clave:valor** también se wrappean en string<br/>
 
 ## Qué diferencias hay con un objeto javascript entonces?
 
@@ -21,7 +21,7 @@ let objeto = {
     nombre:"Ada",
     owners:["Celeste","Ezequiel"],
     profesores:["Juan","Lele"],
-    ayudantes:{nombre:"Stefania",apellido:"La Uno"}
+    ayudantes:{nombre:"Estefania",apellido:"La Uno"}
 };
 // --------------------------------------------------------
 // Mismo objeto pero JSON
@@ -31,7 +31,7 @@ const objetoJson = `
         "nombre":"Ada",
         "owners":["Celeste","Ezequiel"],
         "profesores":["Juan","Lele"],
-        "ayudantes":{"nombre":"Stefania","apellido":"La Uno"}
+        "ayudantes":{"nombre":"Estefania","apellido":"La Uno"}
     }`;
 console.log(objetoJson);
 // --------------------------------------------------------
@@ -49,19 +49,19 @@ console.log(arrayJson);
 ## Valores posibles
 
 En JSON podemos utilizar alguno de los siguientes tipos: 
-    * String
-    * Numero
-    * Objeto
-    * Array
-    * Booleano
-    * Null
+* String
+* Numero
+* Objeto
+* Array
+* Booleano
+* Null
 
-<br/>
+
 JSON es más restrictivo que javascript. 
-    * Todos los valores `strings` deben ir entre comillas dobles 
-    * Las comillas simples no están permitidas 
-    * No hay ningún tipo de comentario en un JSON 
-    * No se admiten valores `undefined`
+* Todos los valores `strings` deben ir entre comillas dobles 
+* Las comillas simples no están permitidas 
+* No hay ningún tipo de comentario en un JSON 
+* No se admiten valores `undefined`
 
 ## Intercambiando Data
 
@@ -70,12 +70,11 @@ JSON es más restrictivo que javascript.
 JSON es texto y podemos convertir objetos de JavaScript en JSON y ese JSON enviarlo al servidor. <br/>
 Y viseversa, podemos convertir JSON que recibimos del servidor a objetos JavaScript <br/>
 
-### Enviando información / Convirtiendo en JSON
-*Copiar y pegar el siguiente ejemplo en la consola de nuestro navegador* <br/>
+### Enviando información
+👉 Copiar y pegar el siguiente ejemplo en la consola de nuestro navegador <br/>
 #### STRINGIFY
 
-Para enviar/guardar información en formato JSON podemos utilizar **stringify** para convertir nuestra estructura. <br/>
-Utilizamos stringify para convertir nuestras estructuras a formato json. <br/>
+Para enviar información en formato JSON podemos utilizar **STRINGIFY** para convertir nuestra estructura. <br/>
 
 ```js
 var usuarioActivo = { usuario: "elstr", age: 30, city: "caba" };
@@ -87,7 +86,7 @@ console.log("Usuario convertido a JSON", usuarioJSON)
 ### Convertir JSON a lo que era ?
 #### PARSE
 Supongamos que hemos convertido un objeto a JSON porque necesitamos enviarlo al servidor y el servidor nos responde devolviendonos el objeto en formato JSON. <br/>
-Cómo convierto un JSON a un objeto javascript? Utilizamos **parse**
+Cómo convierto un JSON a un objeto javascript? Utilizamos **PARSE**
 
 ```js
 // Supongamos que recibimos el usuario previamente definido
