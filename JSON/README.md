@@ -31,7 +31,7 @@ const objetoJson = `
         "nombre":"Ada",
         "owners":["Celeste","Ezequiel"],
         "profesores":["Juan","Lele"],
-        "ayudantes":{"nombre":"Stefania","apellido":"La Uno"}
+        "ayudantes":{"nombre":"Estefania","apellido":"La Uno"}
     }`;
 console.log(objetoJson);
 // --------------------------------------------------------
