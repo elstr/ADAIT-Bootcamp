@@ -70,11 +70,12 @@ JSON es más restrictivo que javascript.
 JSON es texto y podemos convertir objetos de JavaScript en JSON y ese JSON enviarlo al servidor. <br/>
 Y viseversa, podemos convertir JSON que recibimos del servidor a objetos JavaScript <br/>
 
-### Enviando información
+### Enviando información / Convirtiendo en JSON
 *Copiar y pegar el siguiente ejemplo en la consola de nuestro navegador* <br/>
 #### STRINGIFY
 
-Para enviar información en formato JSON podemos utilizar **stringify** para convertir nuestra estructura. <br/>
+Para enviar/guardar información en formato JSON podemos utilizar **stringify** para convertir nuestra estructura. <br/>
+Utilizamos stringify para convertir nuestras estructuras a formato json. <br/>
 
 ```js
 var usuarioActivo = { usuario: "elstr", age: 30, city: "caba" };
