@@ -21,7 +21,7 @@ let objeto = {
     nombre:"Ada",
     owners:["Celeste","Ezequiel"],
     profesores:["Juan","Lele"],
-    ayudantes:{nombre:"Stefania",apellido:"La Uno"}
+    ayudantes:{nombre:"Estefania",apellido:"La Uno"}
 };
 // --------------------------------------------------------
 // Mismo objeto pero JSON
