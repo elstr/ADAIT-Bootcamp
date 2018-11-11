@@ -6,7 +6,7 @@ Orden:
 * jQuery
 * JSON
 * LocalStorage
-<br /><br />
+
 Made with :green_heart: 
 <br />
 Enjoy!!
