@@ -99,3 +99,42 @@ console.log("Usuario convertido de JSON a objeto javascript", usuarioParsed)
 usuarioParsed.telefonos = [{area: 54911, numero: 40395233}]
 console.log("Usuario modificado", usuarioParsed)
 ```
+
+### Combinar JSON y jQuery
+Supongamos el siguiente array formato JSON:
+
+```js
+const arrayProductos = `[
+  { "id": "1", "nombre": "coca cola"},
+  { "id": "3", "nombre": "fanta"},
+  { "id": "5", "nombre": "manaos"}
+]`;
+```
+
+Cómo podemos hacer para cargar cada uno de esos objetos dentro de un `dropdown` que despliegue el nombre del producto?
+* Debo convertir el array de productos de JSON a un array puro de javascript para poder iterarlo
+Utilizamos **parse**
+
+```js
+ var arrayProductosJS = JSON.parse(arrayProductos)
+ var miDropDown = $(
+    '<select id="dropdown" name="amigos" multiple="multiple">'
+  );
+  for (let i = 0; i < arrayProductosJS.length; i++) {
+    var option = $("<option></option>");
+    option.val(producto[i].id);
+    option.text(producto[i].nombre);
+    miDropDown.append(option);
+  }
+  $("#container").append(miDropDown);
+  ```
+
+  Ahora cómo hacemos para ver qué opciones se eligieron del dropdown? <br/>
+  Puedo utilizar un selector que busque aquellas opciones que tengan el atributo `selected` y todas las opciones que devuelve el selector recorrerlas con `.each`
+
+```js
+  $("#dropdown option:selected").each(function() {
+    var productoSeleccionado = $(this).val();
+    console.log("producto seleccionado", productoSeleccionado)
+  });
+```
