@@ -41,5 +41,5 @@
 // // Si están completos, convertir a JSON
 // // Si están incompletos, mostrar un mensaje
 
-// // Agregar al dinámicamente un dropdown que muestre el nombre de todas las personas
-// // poder seleccionar más de una en el boton "Generar JSON" mostrar en un console.log todas las opciones seleccionadas
+// // Agregar dinámicamente un dropdown que muestre el nombre de todas las personas
+// // poder seleccionar más de una y en la funcion del boton "Generar JSON" mostrar en un console.log todas las opciones seleccionadas
