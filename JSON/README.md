@@ -100,7 +100,7 @@ usuarioParsed.telefonos = [{area: 54911, numero: 40395233}]
 console.log("Usuario modificado", usuarioParsed)
 ```
 
-### Combinar JSON y jQuery
+## Combinar JSON y jQuery
 Supongamos el siguiente array formato JSON:
 
 ```js
