@@ -6,6 +6,12 @@ Orden:
 * jQuery
 * JSON
 * LocalStorage
+* AJAX
+* NodeJS
+* Express & APIs
+* React
+* React Router
+* Redux
 
 Made with :green_heart: 
 <br />
