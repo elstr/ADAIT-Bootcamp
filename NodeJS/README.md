@@ -10,7 +10,7 @@ Al contrario que la mayoría del código JavaScript, no se ejecuta en un navegad
 * Generar contenido dinámico.
 
 Charla sobre cómo funciona JS https://www.youtube.com/watch?v=8aGhZQkoFbQ
-http://latentflip.com/loupe/
+http://latentflip.com/loupe/ <br />
 Charla de presentación de NodeJS https://www.youtube.com/watch?v=ztspvPYybIY
 
 ## Comportamiento Asíncrono
