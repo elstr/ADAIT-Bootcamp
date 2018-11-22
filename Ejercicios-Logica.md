@@ -17,7 +17,7 @@ Resolver el ejercicio con funciones separadas. <br/>
     <br/>	Opcion 1. conocer su deudad ->	Respuesta "su deuda es x "
     <br/>	Opcion 2. comprar nuevos productos ->	Respuesta "sera atendido en instantes"
     <br/>	Opcion 3. solicitar ayuda ->	Respuesta "todos los operadores se encuentran ocupados"
-    <br/>	Opcion 4. dar la baja ->	Respuesta "opcion invalida"
+    <br/>	Opcion 4. dar la baja ->	Respuesta "opcion invalida, ya vendiste tu alma al diablo Muajajaja LTA"
     <br/>	Opcion 5. salir ->	Respuesta "gracias por usar nuestro servicio"
     
     * c) Se pide que la persona ingrese el monto a financiar y la cantidad de cuotas segun nuestra tabla <br/>
