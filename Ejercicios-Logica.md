@@ -14,6 +14,7 @@ Resolver el ejercicio con funciones separadas. <br/>
     * a) En una tienda de ropa se cobra con varios medios de pago pero tienen diferencia de recargos, en efectivo se cobra el precio normal, con debito un 5%, con credito un 10% y cheque un 20%
 
     * b) Para una contestadora telefonica programar las siguientes opciones: 
+    <br/> Mostrar en pantalla 5 botones que muestren en un console log lo siguiente segun la opcion seleccionada:
     <br/>	Opcion 1. conocer su deudad ->	Respuesta "su deuda es x "
     <br/>	Opcion 2. comprar nuevos productos ->	Respuesta "sera atendido en instantes"
     <br/>	Opcion 3. solicitar ayuda ->	Respuesta "todos los operadores se encuentran ocupados"
@@ -57,9 +58,14 @@ calcular la suma total del precio de 10 articulos
 
 * Ejercicio 11 <br/> 
 mostrar por pantalla todos los numeros pares entre 2 y 50
+tambien mostrar la suma de todos los numeros impares
+
 
 * Ejercicio 12 <br/> 
-mostrar por pantalla el promedio de precios de una cantidad de sitios ingresada por el usuario, mostrar tambien cual es el menor precio
+Mostrar por pantalla el promedio de precios de productos que ingresa el usuario usuario. <br />
+Mostrar 2 inputs (nombre producto, precio) y 2 botones (agregar, finalizar) <br />
+Al finalizar, mostrar el promedio de precios, el producto mas barato y el mas caro. => Mostrar en una tabla usando jQuery.
+
 
 * Ejercicio 13 <br/> 
 Escribir el factorial de un numero (el factorial de 8 es 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1)
