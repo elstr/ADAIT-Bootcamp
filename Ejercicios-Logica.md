@@ -6,7 +6,10 @@ Realizar un algoritmo para la conversión de dólares a pesos, ingresando el mon
 
 * Ejercicio 3 <br/> 
 Realice el calculo del sueldo de un empleado ingresando el sueldo neto y sabiendo que se le descuenta un 15 % por cargas sociales y se le suma un 10% si tuvo asistencia perfecta (preguntar si  tuvo ausencias)
-
+Resolver el ejercicio con funciones separadas. <br/>
+- Primero llamar a la funcion que suma el 10% por asistencia<br/>
+- Luego llamar a una funcion que descuente el 15% Una funcion que descuente el 15% al sueldo neto ingresado <br/>
+- Armar una unica funcion que llame a ambas funciones: CalcularSueldo() { VerificarAsistencia() RestarCargaSocial() }<br/>
 * Ejercicio 4 <br/>
     * a) En una tienda de ropa se cobra con varios medios de pago pero tienen diferencia de recargos, en efectivo se cobra el precio normal, con debito un 5%, con credito un 10% y cheque un 20%
 
