@@ -1,8 +1,3 @@
-// 1) redondear el borde de las imagenes
-// 2) la que quiera, inline
-// 3) dinamicamente armar botones para cada
-// uno de esos total_pages
-// 4 -> 4 botones
 var usuarios = [];
 var totalPaginas = 1;
 
@@ -17,7 +12,6 @@ function verUsuariosEnConsola() {
     }
   });
 }
-
 function armarHTML() {
   mostrarUsuarios();
   renderBotones();
@@ -36,7 +30,8 @@ function renderBotones() {
     // En el evento on click, llamo a cargarDataPorPagina y le paso la pagina
     boton.on("click", function() {
       console.log("apretaste el boton", index);
-      cargarDataPorPagina(index);
+      const key = "LS" + index;
+      cargarDataPorPagina(index, key);
     });
     // Hago append del boton al container de botones
     botonesContainer.append(boton);
@@ -67,15 +62,26 @@ function mostrarUsuarios() {
 }
 function cargarDataPorPagina(pagina) {
   console.log(pagina);
-  $.ajax({
-    url: "https://reqres.in/api/users",
-    type: "GET",
-    data: {
-      page: pagina
-    },
-    success: function(response) {
-      usuarios = response.data;
-      mostrarUsuarios();
-    }
-  });
+  // Si tengo algo en el local storage me traigo esos usuarios
+  // y llamo a mostrarUsuarios()
+  if (localStorage[key] !== undefined) {
+    // 1) Agarra del localStorage los usuarios en ese key
+    // 2) Mostrar esos usuarios
+    usuarios = JSON.parse;
+  } else {
+    // 1) Traer la data del endpoint
+    // 2) Guardar en LS esa data
+    $.ajax({
+      url: "https://reqres.in/api/users",
+      type: "GET",
+      data: {
+        page: pagina
+      },
+      success: function(response) {
+        usuarios = response.data;
+        localStorage.setItem(key, usuarios);
+        mostrarUsuarios();
+      }
+    });
+  }
 }
