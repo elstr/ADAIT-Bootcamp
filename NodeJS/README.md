@@ -22,6 +22,8 @@ En caso de un error inesperado debemos capturarlo y controlar el posible estado 
 ## V8 (no murió)
 V8 es el entorno de ejecución para JavaScript creado para Google Chrome. Es software libre desde 2008, está escrito en C++ y compila JavaScript a código de máquina.
 
+> V8 compiles and executes JavaScript source code, handles memory allocation for objects, and garbage collects objects it no longer needs. V8’s stop-the-world, generational, accurate garbage collector is one of the keys to V8’s performance.
+
 ## Módulos
 Node.js incorpora varios "módulos", como por ejemplo el módulo de red, que proporciona una capa para programación de red asíncrona y otros módulos fundamentales, como por ejemplo Path, FileSystem, Buffer, Timers y el de propósito más general Stream. <br/>
 
@@ -58,10 +60,22 @@ Para instalar un paquete de manera global utilizamos el flag `-g` <br/>
 NPM viene distribuido junto con node. Es decir, cuando instalamos node estamos instalando npm tambien.
 
 ### Descarga
+Windows / OSX / Linux <br/>
 Para descargar el `zip` o `pkg` ingresar a https://nodejs.org/es/download/
 
 ### Mediante gestor de paquetes
 Ingresar a https://nodejs.org/es/download/package-manager/ y mediante el gestor de paquetes del sistema operativo con el que trabajamos descargar node.
+
+#### Debian, Ubuntu
+```
+$ sudo apt-get install build-essential
+$ sudo apt-get install nodejs
+```
+
+#### Mac (con Homebrew)
+```
+$ brew install nodejs
+```
 
 
 
