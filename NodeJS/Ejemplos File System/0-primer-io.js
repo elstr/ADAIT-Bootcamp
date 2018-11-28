@@ -29,12 +29,16 @@
 //   string, piensa que puedes convertir un String de Javascript en un array de
 //   substrings usando .split(), y que puedes usar '\n' como delimitador.
 
-
 //   Como ya hablamos cuando necesito hacer un require significa
 //   que previamente tengo que instalar un modulo
-var fs = require('fs')
-const buf = fs.readFileSync('/Users/elester/Desktop/ADAIT/Clases Subidas - Github/NodeJS/Ejemplos/test-file.txt')
-const str = buf.toString()
-console.log(str.split('\n'))
 
+var fs = require("fs");
 
+function leerArchivo(rutaAlArchivo) {
+  const buffer = fs.readFileSync(rutaAlArchivo);
+  const contenidoArchivo = buffer.toString();
+  const resultado = contenidoArchivo.split("\n").length;
+  console.log(resultado);
+  return resultado;
+}
+leerArchivo("./test-file.txt");

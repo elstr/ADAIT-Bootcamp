@@ -2,7 +2,7 @@
 
 //   Escribe un programa que use operación de sistema de archivos asíncrona
 //   para leer un archivo e imprimir en consola el número de saltos de línea
-//   ('\n') que contiene. 
+//   ('\n') que contiene.
 
 //   El programa recibirá la ruta al archivo como único argumento.
 
@@ -27,13 +27,28 @@
 //   luego el callback como tercero de modo de que data sea un String y no un
 //   Buffer.
 
-var fs = require('fs')
-fs.readFile('/Users/elester/Desktop/ADAIT/Clases Subidas - Github/NodeJS/Ejemplos/test-file.txt', 'utf8', callback)
-function callback (error, data) { 
-    if(error === null) {
-        console.log("------------------------")
-        console.log("---- no hay errores ----")
-        console.log("------------------------")
-        console.log(data.split('\n').length)
+var fs = require("fs");
+var http = require("http");
+
+function leerArchivo(ruta) {
+  fs.readFile(ruta, "utf8", function(err, data) {
+    if (err === null) {
+      console.log(data);
+      return data;
+    } else {
+      return err;
     }
- }
+  });
+}
+
+http
+  .createServer(function(req, res) {
+    const dataArchivo = leerArchivo("./test-file.txt");
+    console.log(dataArchivo);
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.write("hola mundo");
+    res.end();
+  })
+  .listen(8080);
+
+console.log("Servidor escuchando en puerto 8080");

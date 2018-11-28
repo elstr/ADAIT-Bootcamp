@@ -14,6 +14,8 @@ function filter(dir, filterStr, callback) {
       return path.extname(file) === filterStr;
     });
 
+    list = list.filter(f => path.extname(f) === filterStr);
+
     callback(null, list);
   });
 }
