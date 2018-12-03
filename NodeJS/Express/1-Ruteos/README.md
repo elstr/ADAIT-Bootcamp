@@ -23,5 +23,5 @@ const router = express.Router();
 
 
 Cosas que vamos a usar
-bodyParser
+bodyParser <br/>
 dotenv -> `npm i -S dotenv`
