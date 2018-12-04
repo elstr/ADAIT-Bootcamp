@@ -6,3 +6,4 @@
 * Armar una ruta /productos que reciba por parametro una categoria de productos y retornar los productos que cumplan con dicha categoria.
 * Armar una ruta que sea /users que devuelva un array de usuarios.
 * Armar una ruta /user que reciba por parametro un id. Definir un array de usuarios, buscar ese id que recibimos por parametro y retornarlo en formato json.
+* Armar una ruta /productos/categoria/alta que reciba por parametro el nombre de la categoria que se quiere dar de alta. Si la categoria ya existe, devolver "La categoria ya existe" caso contrario, guardar la categoria en un array y devolver el array.
