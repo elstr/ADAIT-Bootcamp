@@ -1,21 +1,15 @@
 // incluimos el modulo de express
 const express = require('express');
+const bodyParser = require('body-parser');
 
 // creamos la aplicacion de express
 const app = express();
 
-// creamos las rutas
-// creamos el router de express
-const router = express.Router();
+// MIDDLEWARE
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// creamos una ruta
-router.get('/favoritos', function (req, res, next) {
-  res.send('<h1>hola</h1>');
-});
-
-router.post('/favoritos', function (req, res) {
-  // y aca hacemos algo
-});
+const router = require('./routes/rutas');
 
 // le decimos a express que use el router
 app.use(router);

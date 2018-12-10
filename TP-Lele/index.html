@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Pacifico%7CSniglet" rel="stylesheet">
+   <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+   <!--<link rel="stylesheet" href="reset.css">-->
+   <!--<link rel="stylesheet" href="style.css">-->
+   <title>Refinanciadora</title>
+</head>
+<body>
+
+   <span>Ingresa el producto que quieres comprar</span> <input id="input-producto" type="text" placeholder="Producto">
+   <span>Precio</span> <input id="input-precio" type="text" placeholder="Precio">
+   <button onclick="AgregarProductoALaListaDeCompras()">Cargar Compra</button>
+
+   <div class="lista-compra">
+       <ul id="lista-articulos-comprados">
+
+       </ul>
+   </div>
+   <div id="total-a-pagar"></div>
+   <button class="boton-efectivo">Efectivo</button>
+   <button class="boton-debito">Debito</button>
+   <button class="boton-credito">Credito</button>
+   <button class="boton-cheque">Cheque</button>
+
+   <div class="ventana-cuotas">
+   <span>Ingresá las cuotas que seas abonar</span><br>
+   <form>
+       <input type="checkbox" name="tipoDeCuota1" value="0"> 0 cuotas<br>
+       <input type="checkbox" name="tipoDeCuota2" value="12"> 12 cuotas<br>
+       <input type="checkbox" name="tipoDeCuota2" value="24"> 24 cuotas<br>
+       <input type="checkbox" name="tipoDeCuota3" value="36" checked> 36 cuotas<br><br>
+       <input type="submit" value="Calcular">
+     </form>
+   </div>
+
+   <div class="modal-couta-pagar">
+
+   </div>
+
+   <div class="contestadora-tel">
+       <p>Contestadora telefonica del Demonio</p>
+       <button class="buton-conocer-deuda">Conocer su deuda</button>
+       <button class="buton-comprar-nuevo-producto">Comprar nuevos productos</button>
+       <button class="buton-solicitar-ayuda">Solicitar ayuda</button>
+       <button class="buton-dar-baja">Dar la baja</button>
+       <button class="buton-salir">Salir</button>
+   </div>
+
+   <script src="index.js"></script>
+</body>
+</html>
