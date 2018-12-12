@@ -3,9 +3,47 @@ $.ajax('http://localhost:3000/todos')
   .done(function (data) {
     // el servidor me envio el array de todos
     for (var i = 0; i < data.length; i++) {
-      $('#todos').append('<li>' + data[i].text + '</li>')
+      // <li>
+      //   TEXTO_TAREA
+      //   <input value="TEXTO_TAREA"/>
+      //   <button onclick="editar()">editar</button>
+      // </li>
+      // data[i].id
+      $('#todos').append(`<li data-id="${data[i].id}">
+        ${data[i].text}
+        <input value="${data[i].text}"/>
+        <button class="btn-editar">editar</button>
+        <button class="btn-guardar">guardar</button>
+      </li>`)
     }
   })
+
+$(document).on('click', '.btn-guardar', function () {
+  const newText = $(this).siblings('input').val();
+  const id = $(this).parent().data('id');
+  // http://localhost:3000/todos/1
+  $.ajax('http://localhost:3000/todos/' + id, {
+    method: "PUT",
+    data: {
+      text: newText
+    }
+  })
+  .done(function () {
+    location.reload()
+  })
+})
+
+$(document).on('click', '.btn-editar', function () {
+  $(this).siblings('input').show();
+  $(this).siblings('.btn-guardar').show();
+  $(this).hide();
+})
+
+// function editar () {
+//   // este es el elemento donde hacemos click
+//   console.log($(this));
+//   $(this).siblings('input').show();
+// }
 
 $('#new-todo').click(function () {
   let laNuevaTarea = $('#el-texto').val()

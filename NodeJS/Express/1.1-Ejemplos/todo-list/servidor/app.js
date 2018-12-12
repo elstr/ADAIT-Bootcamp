@@ -41,7 +41,25 @@ router.post('/todos', function (req, res) {
 
   // le respondo al cliente enviandole el nuevo objeto del todo
   res.send(newTodo);
-})
+});
+
+router.put('/todos/:id', function (req, res) {
+  const todoId = req.params.id;
+  const todo = req.body;
+
+  // esto devuelve un array con los objetos que cumplen la condicion
+  // todos.filter(...)
+  // por eso usamos
+  let elTodoAEditar = todos.find(todo => todo.id == todoId);
+
+  if (elTodoAEditar === null) {
+    return res.send('todo mal')
+  }
+
+  elTodoAEditar.text = todo.text;
+
+  res.send(elTodoAEditar);
+});
 
 app.use(router);
 
