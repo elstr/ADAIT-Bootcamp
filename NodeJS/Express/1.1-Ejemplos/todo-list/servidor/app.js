@@ -77,13 +77,22 @@ router.put('/todos/:id', function (req, res) {
   res.send(elTodoAEditar);
 });
 
-
-
 router.delete('/todos/:id', function (req, res) {
+  // leemos el array de TODOs guardados en el archivo todos.json
+  let todos = fs.readFileSync('todos.json');
+  todos = JSON.parse(todos);
 
+  const todoId = req.params.id;
+
+  // buscamos el indice donde esta el todo a eliminar
+  let todoPos = todos.findIndex(todo => todo.id == todoId);
+  // con la posicion vamos a eliminar el todo del array
+  todos.splice(todoPos, 1);
+
+  fs.writeFileSync('todos.json', JSON.stringify(todos));
+
+  res.send('todo eliminado');
 })
-
-
 
 app.use(router);
 

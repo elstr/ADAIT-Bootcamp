@@ -14,9 +14,24 @@ $.ajax('http://localhost:3000/todos')
         <input value="${data[i].text}"/>
         <button class="btn-editar">editar</button>
         <button class="btn-guardar">guardar</button>
+        <button class="btn-eliminar">x</button>
       </li>`)
     }
   })
+
+$(document).on('click', '.btn-eliminar', function () {
+  // obtengo el id de la tarea a eliminar
+  const id = $(this).parent().data('id');
+
+  // hago la llamada ajax, con el metodo delete
+  $.ajax('http://localhost:3000/todos/' + id, {
+    method: 'DELETE'
+  })
+  .done(function () {
+    // refrescamos la pagina
+    location.reload();
+  })
+});
 
 $(document).on('click', '.btn-guardar', function () {
   const newText = $(this).siblings('input').val();
@@ -55,5 +70,8 @@ $('#new-todo').click(function () {
   $.ajax('http://localhost:3000/todos', {
     method: 'POST',
     data: newTodo
+  })
+  .done(function () {
+    location.reload();
   })
 })
