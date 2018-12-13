@@ -1,0 +1,23 @@
+/users
+/users/new
+/users/edit
+http://localhost:3000/api/users?search=ezequiel
+/api/users --> get
+ --> FILTRO
+ --> queryParam search
+
+/api/users --> post
+ --> VALIDAR los datos
+ --> grabar el archivo en users.js
+ --> devolver un mensaje de error
+
+/api/users/:id --> put
+ --> VALIDAR los datos
+ --> buscamos el user a editar
+ --> grabar el archivo (los cambios) en users.js
+ --> devolver un mensaje de error
+
+/api/users/:id --> delete
+ --> buscamos el user a eliminar
+ --> eliminar / splice
+ --> grabamos el archivo users.json

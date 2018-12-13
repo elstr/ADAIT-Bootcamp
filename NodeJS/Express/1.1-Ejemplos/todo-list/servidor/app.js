@@ -46,7 +46,6 @@ router.post('/todos', function (req, res) {
 router.put('/todos/:id', function (req, res) {
   const todoId = req.params.id;
   const todo = req.body;
-
   // esto devuelve un array con los objetos que cumplen la condicion
   // todos.filter(...)
   // por eso usamos
