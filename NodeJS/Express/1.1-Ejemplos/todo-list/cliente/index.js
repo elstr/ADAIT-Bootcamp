@@ -11,13 +11,27 @@ $.ajax('http://localhost:3000/todos')
       // data[i].id
       $('#todos').append(`<li data-id="${data[i].id}">
         ${data[i].text}
-        <input value="${data[i].text}"/>
+        <input value="${data[i].text}" id="text"/>
         <button class="btn-editar">editar</button>
         <button class="btn-guardar">guardar</button>
         <button class="btn-eliminar">x</button>
+        <input class="check-done" type="checkbox" id="done" ${data[i].finished == 'true' ? 'checked' : ''} />
       </li>`)
     }
   })
+
+$(document).on('change', '.check-done', function () {
+  const id = $(this).parent().data('id');
+  const elTextoOriginal = $(this).siblings('input#text').val();
+
+  $.ajax('http://localhost:3000/todos/' + id, {
+    method: "PUT",
+    data: {
+      text: elTextoOriginal,
+      finished: $(this).prop('checked')
+    }
+  })
+});
 
 $(document).on('click', '.btn-eliminar', function () {
   // obtengo el id de la tarea a eliminar
@@ -34,7 +48,7 @@ $(document).on('click', '.btn-eliminar', function () {
 });
 
 $(document).on('click', '.btn-guardar', function () {
-  const newText = $(this).siblings('input').val();
+  const newText = $(this).siblings('input#text').val();
   const id = $(this).parent().data('id');
   // http://localhost:3000/todos/1
   $.ajax('http://localhost:3000/todos/' + id, {

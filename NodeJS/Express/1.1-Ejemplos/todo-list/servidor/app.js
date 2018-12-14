@@ -73,7 +73,10 @@ router.put('/todos/:id', function (req, res) {
     return res.send('todo mal')
   }
 
+  console.log(todo);
+
   elTodoAEditar.text = todo.text;
+  elTodoAEditar.finished = todo.finished;
 
   fs.writeFileSync('todos.json', JSON.stringify(todos));
 
