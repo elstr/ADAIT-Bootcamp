@@ -17,7 +17,10 @@ const router = express.Router();
 // const todos = [];
 
 // lo inicializamos en 1, el primer ID que quiero asignar
-let contador = 1;
+// let contador = 1;
+let todos = fs.readFileSync('todos.json');
+todos = JSON.parse(todos);
+let contador = todos.length === 0 ? 1 : todos[ todos.length -1 ].id + 1;
 
 // configuramos el server para que cuando nos llegue
 // un http-get a la direccion /todos, devolvamos el array
