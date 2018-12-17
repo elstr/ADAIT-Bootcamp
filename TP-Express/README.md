@@ -6,7 +6,7 @@ _Fecha de entrega: **Viernes 21 de diciembre**_
 
 Se debe crear una aplicación cliente / servidor, __con Express__, con los siguientes requerimientos:
 
-1. Atienda a la ruta `/bananin` y devuelva la palabra `bananon`
+1. Atienda a la ruta `/estaspensandolomismoqueyobananin` y devuelva la frase `claro que si bananon`
 2.  Al ingresar a la ruta `/users/new` renderice un formulario con los siguientes datos y un botón de guardar:
     * Nombre (Máximo 30 carácteres)
     * Apellido (Máximo 30 carácteres)
