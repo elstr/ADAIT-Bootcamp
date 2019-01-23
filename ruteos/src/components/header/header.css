@@ -1,0 +1,44 @@
+.header {
+    background: white;
+    display: flex;
+    align-items: center;
+  }
+  .header nav {
+    flex: 1;
+    display: flex;
+  }
+  
+  .header nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 100px));
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header li {
+    list-style: none;
+    display: flex;
+  }
+  
+  .header a {
+    color: #181c30;
+    display: flex;
+    flex: 1;
+    text-decoration: none;
+    transition: .2s;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 20px;
+  }
+  
+  .header a.is-selected {
+    box-shadow: inset 0 3px 0 0#161c30;
+  }
+  
+  .header a:hover {
+    box-shadow: inset 0 3px 0 0#161c30;
+  }
