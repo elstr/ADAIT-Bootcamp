@@ -15,9 +15,10 @@ class App extends Component {
             <Header />
             {/* 1. defino a qué path tiene que ser sensible Route */}
             {/* 2. defino qué componente tengo que renderizar */}
-            {/* <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/productos" component={Productos} />
-            <Route exact path="/productos/detalle/:id" component={Detalle} /> */}
+            {/* <Route exact path="/productos/detalle/:id" component={Detalle} /> Si lo uso así mando de a 1 param separado por / y lo recibo en props.match.params */}
+            <Route exact path="/productos/detalle" component={Detalle} />
           </div>
         </BrowserRouter>
       </div>
