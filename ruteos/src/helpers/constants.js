@@ -895,3 +895,101 @@ export const PRODUCTOS = [
     ]
   }
 ];
+
+export const formattedProducts = PRODUCTOS.reduce((acc, product) => {
+  if (!acc[product.id]) {
+    acc[product.id] = {
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      curr: product.currency_id,
+      img: product.thumbnail
+    };
+  }
+  return acc;
+}, []);
+
+const librerias = [
+  "angular",
+  "react",
+  "angular",
+  "react",
+  "angular",
+  "react",
+  "angular",
+  "react",
+  "vue",
+  "vanilla js"
+];
+export const formateadas = librerias.reduce((acc, lib) => {
+  if (acc[lib]) {
+    acc[lib] += 1;
+  } else {
+    acc[lib] = 1;
+  }
+  return acc;
+}, []);
+
+const materiales = [
+  { tipo: "cable", cantidad: 5000, sucursal: "Centro" },
+  { tipo: "cable", cantidad: 1000, sucursal: "Centro" },
+  { tipo: "cable", cantidad: 650, sucursal: "Garin" },
+  { tipo: "cable", cantidad: 100, sucursal: "Garin" },
+  { tipo: "cable", cantidad: 150, sucursal: "Vicente Lopez" },
+  { tipo: "cable", cantidad: 300, sucursal: "Vicente Lopez" },
+  { tipo: "teclado", cantidad: 10, sucursal: "Centro" },
+  { tipo: "teclado", cantidad: 1200, sucursal: "Garin" },
+  { tipo: "modem", cantidad: 77, sucursal: "Centro" },
+  { tipo: "monitor", cantidad: 20, sucursal: "Vicente Lopez" },
+  { tipo: "monitor", cantidad: 10, sucursal: "Centro" }
+];
+export function filtrarMateriales() {
+  return materiales.filter(
+    material => material.tipo === "cable" && material.sucursal === "Centro"
+  );
+}
+export function findMaterialMenorQueCien() {
+  return materiales.find(material => material.cantidad < 100);
+}
+
+const votos = [
+  "angular",
+  "react",
+  "angular",
+  "react",
+  "angular",
+  "react",
+  "angular",
+  "react",
+  "vue",
+  "vanilla js"
+];
+
+// REDUCE
+
+function reduceArray() {
+  // acumulador, item (value)
+  // taly / acum / acc value
+  return votos.reduce((acumulador, item) => {
+    // aca pongo la logica para hacer lo que necesito
+    if (acumulador[item]) {
+      acumulador[item] += 1;
+    } else {
+      acumulador[item] = 1;
+    }
+    return acumulador;
+  }, []);
+}
+
+export default reduceArray;
+
+export function reduceMateriales() {
+  return materiales.reduce((acc, item) => {
+    if (acc[item.tipo]) {
+      acc[item.tipo] += item.cantidad;
+    } else {
+      acc[item.tipo] = item.cantidad;
+    }
+    return acc;
+  }, []);
+}
