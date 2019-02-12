@@ -1,4 +1,4 @@
-# REACT
+# REACT - Repo: https://github.com/elstr/Clase1
 
 ## Clase 1
 ### Setup
